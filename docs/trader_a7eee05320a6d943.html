@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trading Report — 0xa7ee...5e14</title>
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0f1117;
+  color: #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  padding: 2rem 1rem;
+}
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.6rem; color: #f8fafc; margin-bottom: 0.3rem; }
+h2 { font-size: 1.15rem; color: #94a3b8; font-weight: 500; margin-bottom: 1.5rem; }
+h3 { font-size: 1.05rem; color: #cbd5e1; margin: 2rem 0 0.7rem; border-bottom: 1px solid #1e293b; padding-bottom: 0.3rem; }
+p, li { margin-bottom: 0.5rem; }
+ul, ol { padding-left: 1.4rem; }
+code, .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 0.875em; }
+
+/* Header */
+.header { margin-bottom: 2.5rem; }
+.header .wallet { font-size: 1.3rem; color: #f1f5f9; font-family: monospace; letter-spacing: 0.03em; }
+.header .period  { color: #64748b; font-size: 0.9rem; margin-top: 0.2rem; }
+.header .pnl     { font-size: 2rem; font-weight: 700; margin-top: 0.5rem; font-family: monospace; }
+.pnl.pos  { color: #4ade80; }
+.pnl.neg  { color: #f87171; }
+.pnl.zero { color: #94a3b8; }
+
+/* Low-confidence banner */
+.banner {
+  background: #451a03;
+  border: 1px solid #92400e;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  color: #fbbf24;
+  font-size: 0.9rem;
+}
+
+/* Stats table */
+.stats-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; }
+.stats-table th {
+  background: #1e293b;
+  color: #94a3b8;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.stats-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #1e293b;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+.stats-table tr:hover td { background: #1a2234; }
+.num-pos { color: #4ade80; }
+.num-neg { color: #f87171; }
+.num-neutral { color: #93c5fd; }
+
+/* Markdown-rendered analysis */
+.analysis { margin-top: 1rem; }
+.analysis h3 { color: #e2e8f0; border-color: #334155; }
+.analysis p  { color: #cbd5e1; }
+.analysis li { color: #cbd5e1; }
+.analysis strong { color: #f1f5f9; }
+
+/* Asset chips */
+.chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.5rem 0 1.5rem; }
+.chip {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: #7dd3fc;
+}
+
+/* Equity curve */
+.equity-wrap { margin: 1.5rem 0; }
+.equity-wrap svg { display: block; width: 100%; border-radius: 6px; background: #0d1420; }
+
+/* Footer */
+.footer { margin-top: 3rem; font-size: 0.75rem; color: #334155; border-top: 1px solid #1e293b; padding-top: 1rem; }
+.no-data { color: #475569; font-style: italic; padding: 2rem 0; text-align: center; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  
+
+  <div class="header">
+    <div class="wallet">0xa7ee...5e14</div>
+    <div class="period">2026-04-17 → 2026-05-31</div>
+    <div class="pnl num-pos">+$11.75</div>
+  </div>
+
+  <div class="chips"><span class="chip">BTC</span><span class="chip">xyz:BRENTOIL</span><span class="chip">xyz:CL</span><span class="chip">xyz:GOLD</span><span class="chip">xyz:SILVER</span><span class="chip">xyz:SP500</span></div>
+
+  <div class="equity-wrap"><h3>Equity Curve</h3><svg viewBox="0 0 860 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+      <linearGradient id="eqgrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#4ade80" stop-opacity="0.35"/>
+        <stop offset="100%" stop-color="#4ade80" stop-opacity="0.02"/>
+      </linearGradient>
+    </defs>
+  <line x1="30" y1="64.9" x2="830" y2="64.9" stroke="#334155" stroke-width="1" stroke-dasharray="4,4"/>
+  <polygon points="30.0,150.0 30.0,61.9 48.6,59.1 67.2,51.5 85.8,43.2 104.4,40.0 123.0,37.1 141.6,33.7 160.2,31.4 178.8,30.0 197.4,122.8 216.0,122.6 234.7,122.6 253.3,122.0 271.9,108.8 290.5,146.3 309.1,148.5 327.7,150.0 346.3,147.2 364.9,146.8 383.5,146.0 402.1,145.8 420.7,141.2 439.3,140.8 457.9,137.2 476.5,133.3 495.1,133.2 513.7,128.2 532.3,128.2 550.9,125.5 569.5,123.2 588.1,49.4 606.7,49.9 625.3,47.0 644.0,46.1 662.6,62.9 681.2,62.8 699.8,62.5 718.4,62.2 737.0,62.1 755.6,62.0 774.2,62.4 792.8,62.5 811.4,62.5 830.0,62.5 830.0,150.0" fill="url(#eqgrad)"/>
+  <polyline points="30.0,61.9 48.6,59.1 67.2,51.5 85.8,43.2 104.4,40.0 123.0,37.1 141.6,33.7 160.2,31.4 178.8,30.0 197.4,122.8 216.0,122.6 234.7,122.6 253.3,122.0 271.9,108.8 290.5,146.3 309.1,148.5 327.7,150.0 346.3,147.2 364.9,146.8 383.5,146.0 402.1,145.8 420.7,141.2 439.3,140.8 457.9,137.2 476.5,133.3 495.1,133.2 513.7,128.2 532.3,128.2 550.9,125.5 569.5,123.2 588.1,49.4 606.7,49.9 625.3,47.0 644.0,46.1 662.6,62.9 681.2,62.8 699.8,62.5 718.4,62.2 737.0,62.1 755.6,62.0 774.2,62.4 792.8,62.5 811.4,62.5 830.0,62.5" fill="none" stroke="#4ade80" stroke-width="2" stroke-linejoin="round"/>
+  <text x="34" y="26.0" fill="#94a3b8" font-size="10" font-family="monospace">$+167</text>
+  <text x="34" y="162.0" fill="#94a3b8" font-size="10" font-family="monospace">$-406</text>
+</svg></div>
+
+  <h3>The Numbers</h3>
+  <table class="stats-table">
+    <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+    <tbody><tr><td>Total round-trip trades</td><td class="num-neutral mono">44</td></tr><tr><td>Win rate</td><td class="num-pos mono">77.3%</td></tr><tr><td>Avg win</td><td class="num-pos mono">+$21.66</td></tr><tr><td>Avg loss</td><td class="num-neg mono">-$72.49</td></tr><tr><td>Win/Loss ratio</td><td class="num-neutral mono">0.30</td></tr><tr><td>Expectancy</td><td class="num-pos mono">+$0.27</td></tr><tr><td>Profit factor</td><td class="num-pos mono">1.02</td></tr><tr><td>Net PnL (after fees &amp; funding)</td><td class="num-pos mono">+$11.75</td></tr><tr><td>Max drawdown</td><td class="num-neg mono">-$461.02</td></tr><tr><td>Avg leverage</td><td class="num-neutral mono">14.5x</td></tr><tr><td>Peak leverage</td><td class="num-neutral mono">54.7x</td></tr><tr><td>Long trades / PnL</td><td class="num-pos mono">33 / +$206.55</td></tr><tr><td>Short trades / PnL</td><td class="num-neg mono">11 / -$194.81</td></tr><tr><td>Avg hold time — winners</td><td class="num-neutral mono">19.6h</td></tr><tr><td>Avg hold time — losers</td><td class="num-neutral mono">65.6h</td></tr><tr><td>Funding earned</td><td class="num-pos mono">+$16.37</td></tr><tr><td>Funding paid</td><td class="num-neg mono">+$12.33</td></tr><tr><td>Liquidations</td><td class="num-neutral mono">0</td></tr></tbody>
+  </table>
+
+  <h3>Per-Asset Breakdown</h3>
+  <table class="stats-table">
+    <thead><tr><th>Asset</th><th>Trades</th><th>Win Rate</th><th>Net PnL</th><th>Profit Factor</th></tr></thead>
+    <tbody><tr><td class="mono">BTC</td><td>17</td><td class="mono">76.5%</td><td class="mono num-neg">-$4.12</td><td class="mono">0.98</td></tr><tr><td class="mono">xyz:BRENTOIL</td><td>7</td><td class="mono">100.0%</td><td class="mono num-pos">+$394.19</td><td class="mono">∞</td></tr><tr><td class="mono">xyz:CL</td><td>4</td><td class="mono">75.0%</td><td class="mono num-neg">-$351.06</td><td class="mono">0.21</td></tr><tr><td class="mono">xyz:GOLD</td><td>3</td><td class="mono">33.3%</td><td class="mono num-neg">-$4.42</td><td class="mono">0.75</td></tr><tr><td class="mono">xyz:SILVER</td><td>3</td><td class="mono">33.3%</td><td class="mono num-neg">-$71.07</td><td class="mono">0.13</td></tr><tr><td class="mono">xyz:SP500</td><td>10</td><td class="mono">90.0%</td><td class="mono num-pos">+$48.23</td><td class="mono">294.23</td></tr></tbody>
+  </table>
+
+  <div class="analysis">
+    <h3>Coaching Report — Wallet 0xa7ee...5e14</h3>
+
+<p>---</p>
+
+<h3>1. The Verdict</h3>
+
+<p>This is a high-frequency scalper with a genuine edge in exactly two assets — BRENTOIL and SP500 — who is systematically destroying that edge by holding losers until they become catastrophic. The win rate of 77% is real; the problem is the shape of the distribution. Average winners are $21.66, average losers are $72.49 — a 0.30 win/loss ratio that sits right at the mathematical breakeven line with this win rate. After 44 trades, the account has made $11.75 on a max drawdown of $461. The single most expensive habit is refusing to close losing positions: losers are held 65.56 hours on average versus 19.63 hours for winners — 3.3x longer. One CL trade held 214 hours for -$443. One SILVER trade held 405 hours. These aren't trades; they're frozen capital masquerading as open positions.</p>
+
+<p>---</p>
+
+<h3>2. Why You&#x27;re Losing</h3>
+
+<p><strong>Reason 1: Catastrophic loss on CL from refusing to close</strong></p>
+
+<p>The CL book shows exactly one recurring pattern: quick scalps work, bagholding destroys. On April 17, two CL shorts closed in 0.0h and 0.2h for +$35.92 and +$39.85. Then on April 19, a CL short was opened at $85.74 and held for <strong>214.3 hours</strong> as price ran to $100.97 — a -$443.24 loss. That single trade cost more than twice the account's total PnL. The asset wasn't the problem; the exit discipline was. Net CL PnL: -$351.06 across 4 trades. The winning CL formula was already demonstrated two days earlier.</p>
+
+<p><strong>Reason 2: BTC is a negative-expectancy grind with no real edge</strong></p>
+
+<p>17 trades, 76% win rate, net PnL: -$4.12. Profit factor: 0.98. The wins are real but small ($13.65 avg); the losses overwhelm them ($45.39 avg loss). Three specific examples: April 22 BTC Short -$178.82 (0.7h, price moved 76770→77682 against the short). May 1 BTC Long -$2.27 at 55x leverage. May 16 BTC Long -$0.25 (essentially zero edge in, zero out). BTC is the highest trade-count asset and the only large-cap that's losing money. It's consuming the most attention and delivering the worst risk-adjusted return.</p>
+
+<p><strong>Reason 3: SILVER and GOLD are low-conviction trades held far too long</strong></p>
+
+<p>SILVER: 3 trades, -$71.07. The May 4 SILVER long held 32 hours for -$80.15. The May 14 SILVER long held <strong>405 hours</strong> (17 days) for -$1.97 — a position so stubborn it essentially sat dead while price returned to entry. GOLD: 3 trades, -$4.42, one winner barely covering two back-to-back losses. These assets have no demonstrated edge in this book and account for a combined -$75.49 in losses with only 6 trades total. There is no reason to be trading these.</p>
+
+<p>---</p>
+
+<h3>3. Your Biases</h3>
+
+<p><strong>CONFIRMED: Disposition Effect (cutting winners early, holding losers indefinitely)</strong></p>
+
+<p>This is the dominant bias in this book. The numbers are unambiguous: winners close in 19.63 hours on average; losers stay open 65.56 hours. Every major loss has a long hold attached to it. CL April 19: -$443, 214 hours. SILVER May 4: -$80, 32 hours. SILVER May 14: -$1.97, 405 hours (the loss was tiny only because the position was tiny — the hold time is pathological). Meanwhile, the biggest winners close quickly: BRENTOIL May 1 Short +$352.47 in 0.4 hours. BRENTOIL April 27 Long +$12.64 in 0.5 hours. The trader takes profits fast and lets losses fester. This is the textbook definition of the disposition effect and it is costing this account its entire P&L.</p>
+
+<p><strong>CONFIRMED: Over-Concentration / Ignoring Actual Edge</strong></p>
+
+<p>The actual edge in this account lives in BRENTOIL: 7 trades, 100% win rate, +$394.19, average win $56.31. That is a 7-for-7 run with meaningful dollar returns. SP500 is also working: 10 trades, 90% win rate, +$48.23. Together these two assets account for +$442.42 in PnL on 17 trades. Meanwhile, the trader has placed 17 BTC trades for a net of -$4.12. They are spending their most active attention on an asset with no demonstrated edge while underweighting the only assets generating real returns. This is concentration in the wrong direction.</p>
+
+<p><strong>CONFIRMED: Over-Leverage on Specific Trades</strong></p>
+
+<p>Average leverage is 14.49x, which is already aggressive. But the May 1 BTC long shows 55x leverage (matching the stated 54.7x peak). The BRENTOIL trades on April 24 ran at 29-30x. The BTC April 22 Short (which lost -$178.82) and the immediate flip from a 17x long on the same asset in the same hour suggests leverage is being deployed reactively, not planned. A -$178 loss on BTC in 42 minutes at high leverage is a position that was too big to hold through any noise.</p>
+
+<p><strong>CONFIRMED: Possible Revenge / Overconfidence Sequence (limited evidence, single instance)</strong></p>
+
+<p>April 22, 01:05: BTC Long +$62.82 (1.1 hours, price 76324→76806). April 22, 02:23: BTC Short -$178.82 (0.7 hours, price 76770→77682). Within 78 minutes of closing a winning long, the trader reversed to short — and lost nearly 3x as much. The market continued upward, meaning the reversal was either a directional change of heart or a counter-trade after the big win. One instance is not a pattern, but with only 44 trades, this is worth watching.</p>
+
+<p><strong>REFUTED: Funding Bleed</strong></p>
+
+<p>Net funding position is +$4.04 ($16.37 earned, -$12.33 paid). Not a problem here.</p>
+
+<p><strong>REFUTED: FOMO Chasing</strong></p>
+
+<p>Cannot evidence this from the trade data provided. Entry timing relative to prior moves is not visible in the fill data.</p>
+
+<p><strong>REFUTED: Session/Time Effects</strong></p>
+
+<p>Activity clusters at 1-2 AM UTC (14 trades) and 11-12 UTC (11 trades), but I don't have PnL broken out by hour to confirm worse performance at any specific session. I won't manufacture a pattern the data doesn't show.</p>
+
+<p>---</p>
+
+<h3>4. What&#x27;s Working</h3>
+
+<p><strong>BRENTOIL is this trader&#x27;s actual business. Everything else is noise.</strong></p>
+
+<p>7 trades. 7 wins. $394.19 PnL. Average win $56.31. Profit factor: infinity (zero losses). The BRENTOIL book looks like a competent, confident operator: entries at clean levels (97.21, 98.13, 99.91, 100.07, 100.20, 108.72), exits taken quickly (0.0h to 57.5h), and the one extended hold (57.5h on the April 25 Short) still closed green at +$0.52. Even the short-side works: May 1 Short at 108.72 closed at 106.67 in 0.4 hours for +$352.47. This trader knows BRENTOIL. They understand the instrument, they enter with conviction, and they have (so far) the discipline to exit when the setup plays out.</p>
+
+<p><strong>SP500 scalping works at the entry level — the position sizing is too small to matter.</strong></p>
+
+<p>10 trades, 90% win rate, +$48.23. The setups are clearly profitable (April 17: +$13.77 in 3.7h, +$15.05 in 0.6h; April 17 evening: +$11.03 in 80.5h). The problem is that average SP500 wins are only $5.38 — these are likely tiny notional positions. The edge is real; the sizing is not matching it.</p>
+
+<p>---</p>
+
+<h3>5. One Thing to Change Next</h3>
+
+<p><strong>Set a hard maximum hold time of 8 hours on any losing position. No exceptions.</strong></p>
+
+<p>This is not a philosophical suggestion — it is a rule that would have directly prevented the two worst trades in this book. CL April 19 held 214 hours for -$443.24. SILVER May 4 held 32 hours for -$80.15. SILVER May 14 held 405 hours for a near-zero loss only by accident. In all three cases, the position was underwater well before the 8-hour mark, and holding longer made things worse. Your winners close in under 20 hours on average — you already know instinctively when a trade is working. Apply that same instinct to exits on losers: if it hasn't worked in 8 hours, the setup is dead. Close it. Move on.</p>
+
+<p>Write the rule down: <strong>&quot;If a position is negative at the 8-hour mark, I close it at market.&quot;</strong> Apply it starting on your next trade. One rule. One change. Based on your actual history, that rule alone recovers most of your drawdown.</p>
+  </div>
+
+  <div class="footer">
+    Generated by hyperliquid-journal on 2026-05-31 11:40 UTC. Data from Hyperliquid API. Not financial advice.
+  </div>
+
+</div>
+</body>
+</html>

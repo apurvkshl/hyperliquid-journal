@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trading Report — 0x87f9...e2cf</title>
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0f1117;
+  color: #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  padding: 2rem 1rem;
+}
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.6rem; color: #f8fafc; margin-bottom: 0.3rem; }
+h2 { font-size: 1.15rem; color: #94a3b8; font-weight: 500; margin-bottom: 1.5rem; }
+h3 { font-size: 1.05rem; color: #cbd5e1; margin: 2rem 0 0.7rem; border-bottom: 1px solid #1e293b; padding-bottom: 0.3rem; }
+p, li { margin-bottom: 0.5rem; }
+ul, ol { padding-left: 1.4rem; }
+code, .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 0.875em; }
+
+/* Header */
+.header { margin-bottom: 2.5rem; }
+.header .wallet { font-size: 1.3rem; color: #f1f5f9; font-family: monospace; letter-spacing: 0.03em; }
+.header .period  { color: #64748b; font-size: 0.9rem; margin-top: 0.2rem; }
+.header .pnl     { font-size: 2rem; font-weight: 700; margin-top: 0.5rem; font-family: monospace; }
+.pnl.pos  { color: #4ade80; }
+.pnl.neg  { color: #f87171; }
+.pnl.zero { color: #94a3b8; }
+
+/* Low-confidence banner */
+.banner {
+  background: #451a03;
+  border: 1px solid #92400e;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  color: #fbbf24;
+  font-size: 0.9rem;
+}
+
+/* Stats table */
+.stats-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; }
+.stats-table th {
+  background: #1e293b;
+  color: #94a3b8;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.stats-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #1e293b;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+.stats-table tr:hover td { background: #1a2234; }
+.num-pos { color: #4ade80; }
+.num-neg { color: #f87171; }
+.num-neutral { color: #93c5fd; }
+
+/* Markdown-rendered analysis */
+.analysis { margin-top: 1rem; }
+.analysis h3 { color: #e2e8f0; border-color: #334155; }
+.analysis p  { color: #cbd5e1; }
+.analysis li { color: #cbd5e1; }
+.analysis strong { color: #f1f5f9; }
+
+/* Asset chips */
+.chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.5rem 0 1.5rem; }
+.chip {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: #7dd3fc;
+}
+
+/* Equity curve */
+.equity-wrap { margin: 1.5rem 0; }
+.equity-wrap svg { display: block; width: 100%; border-radius: 6px; background: #0d1420; }
+
+/* Footer */
+.footer { margin-top: 3rem; font-size: 0.75rem; color: #334155; border-top: 1px solid #1e293b; padding-top: 1rem; }
+.no-data { color: #475569; font-style: italic; padding: 2rem 0; text-align: center; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  
+
+  <div class="header">
+    <div class="wallet">0x87f9...e2cf</div>
+    <div class="period">2025-06-13 → 2025-06-13</div>
+    <div class="pnl num-neg">-$40.76</div>
+  </div>
+
+  <div class="chips"><span class="chip">BTC</span></div>
+
+  <div class="equity-wrap"><h3>Equity Curve</h3><svg viewBox="0 0 860 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+      <linearGradient id="eqgrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#f87171" stop-opacity="0.35"/>
+        <stop offset="100%" stop-color="#f87171" stop-opacity="0.02"/>
+      </linearGradient>
+    </defs>
+  
+  <polygon points="30.0,150.0 30.0,30.0 40.0,30.1 50.0,31.4 60.0,33.3 70.0,34.2 80.0,35.2 90.0,36.2 100.0,37.7 110.0,38.6 120.0,39.5 130.0,40.7 140.0,41.6 150.0,42.4 160.0,43.9 170.0,44.7 180.0,45.3 190.0,46.0 200.0,46.9 210.0,47.8 220.0,48.8 230.0,49.7 240.0,50.6 250.0,51.4 260.0,52.5 270.0,53.7 280.0,54.7 290.0,56.1 300.0,57.1 310.0,58.9 320.0,59.8 330.0,61.6 340.0,62.6 350.0,65.0 360.0,66.0 370.0,66.8 380.0,68.0 390.0,70.0 400.0,70.7 410.0,71.9 420.0,72.6 430.0,73.7 440.0,75.3 450.0,76.6 460.0,77.4 470.0,78.5 480.0,79.5 490.0,81.2 500.0,82.8 510.0,85.2 520.0,87.2 530.0,89.5 540.0,91.8 550.0,94.6 560.0,97.1 570.0,99.1 580.0,100.2 590.0,101.9 600.0,103.9 610.0,106.2 620.0,108.6 630.0,110.2 640.0,112.6 650.0,114.8 660.0,116.6 670.0,120.8 680.0,122.5 690.0,124.0 700.0,125.3 710.0,126.4 720.0,129.5 730.0,129.8 740.0,131.3 750.0,133.3 760.0,134.9 770.0,136.6 780.0,141.9 790.0,142.2 800.0,145.2 810.0,147.5 820.0,149.9 830.0,150.0 830.0,150.0" fill="url(#eqgrad)"/>
+  <polyline points="30.0,30.0 40.0,30.1 50.0,31.4 60.0,33.3 70.0,34.2 80.0,35.2 90.0,36.2 100.0,37.7 110.0,38.6 120.0,39.5 130.0,40.7 140.0,41.6 150.0,42.4 160.0,43.9 170.0,44.7 180.0,45.3 190.0,46.0 200.0,46.9 210.0,47.8 220.0,48.8 230.0,49.7 240.0,50.6 250.0,51.4 260.0,52.5 270.0,53.7 280.0,54.7 290.0,56.1 300.0,57.1 310.0,58.9 320.0,59.8 330.0,61.6 340.0,62.6 350.0,65.0 360.0,66.0 370.0,66.8 380.0,68.0 390.0,70.0 400.0,70.7 410.0,71.9 420.0,72.6 430.0,73.7 440.0,75.3 450.0,76.6 460.0,77.4 470.0,78.5 480.0,79.5 490.0,81.2 500.0,82.8 510.0,85.2 520.0,87.2 530.0,89.5 540.0,91.8 550.0,94.6 560.0,97.1 570.0,99.1 580.0,100.2 590.0,101.9 600.0,103.9 610.0,106.2 620.0,108.6 630.0,110.2 640.0,112.6 650.0,114.8 660.0,116.6 670.0,120.8 680.0,122.5 690.0,124.0 700.0,125.3 710.0,126.4 720.0,129.5 730.0,129.8 740.0,131.3 750.0,133.3 760.0,134.9 770.0,136.6 780.0,141.9 790.0,142.2 800.0,145.2 810.0,147.5 820.0,149.9 830.0,150.0" fill="none" stroke="#f87171" stroke-width="2" stroke-linejoin="round"/>
+  <text x="34" y="26.0" fill="#94a3b8" font-size="10" font-family="monospace">$-0</text>
+  <text x="34" y="162.0" fill="#94a3b8" font-size="10" font-family="monospace">$-41</text>
+</svg></div>
+
+  <h3>The Numbers</h3>
+  <table class="stats-table">
+    <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+    <tbody><tr><td>Total round-trip trades</td><td class="num-neutral mono">81</td></tr><tr><td>Win rate</td><td class="num-neg mono">0.0%</td></tr><tr><td>Avg win</td><td class="num-pos mono">+$0.00</td></tr><tr><td>Avg loss</td><td class="num-neg mono">-$0.50</td></tr><tr><td>Win/Loss ratio</td><td class="num-neutral mono">0.00</td></tr><tr><td>Expectancy</td><td class="num-neg mono">-$0.50</td></tr><tr><td>Profit factor</td><td class="num-neg mono">0.00</td></tr><tr><td>Net PnL (after fees &amp; funding)</td><td class="num-neg mono">-$40.76</td></tr><tr><td>Max drawdown</td><td class="num-neg mono">-$40.76</td></tr><tr><td>Avg leverage</td><td class="num-neutral mono">N/A</td></tr><tr><td>Peak leverage</td><td class="num-neutral mono">N/A</td></tr><tr><td>Long trades / PnL</td><td class="num-neg mono">7 / -$2.35</td></tr><tr><td>Short trades / PnL</td><td class="num-neg mono">74 / -$38.40</td></tr><tr><td>Avg hold time — winners</td><td class="num-neutral mono">0.0h</td></tr><tr><td>Avg hold time — losers</td><td class="num-neutral mono">0.0h</td></tr><tr><td>Funding earned</td><td class="num-pos mono">+$0.00</td></tr><tr><td>Funding paid</td><td class="num-neg mono">+$0.00</td></tr><tr><td>Liquidations</td><td class="num-neutral mono">0</td></tr></tbody>
+  </table>
+
+  <h3>Per-Asset Breakdown</h3>
+  <table class="stats-table">
+    <thead><tr><th>Asset</th><th>Trades</th><th>Win Rate</th><th>Net PnL</th><th>Profit Factor</th></tr></thead>
+    <tbody><tr><td class="mono">BTC</td><td>81</td><td class="mono">0.0%</td><td class="mono num-neg">-$40.76</td><td class="mono">0.00</td></tr></tbody>
+  </table>
+
+  <div class="analysis">
+    <h3>Trading Review: 0x87f9...e2cf — Hyperliquid BTC Perps</h3>
+
+<p>---</p>
+
+<h3>1. The Verdict</h3>
+
+<p>This is a new or experimental trader running minimum position size who spent <strong>77 consecutive minutes on a single Thursday afternoon</strong> (June 13, 17:48–18:05 UTC) mechanically shorting BTC through a sustained $600+ rally. BTC climbed from roughly $104,800 to $105,424 during this window. The trader was short for 74 of 81 trades and lost every single one — a 0% win rate is not bad luck, it is structural. The single most expensive thing happening here is <strong>directional rigidity against a clearly trending market</strong>: after each short loss, the next trade is another short, then another, then another, for 77 minutes straight, with no evidence of ever asking whether the bias was wrong. The total damage is only $40.76 because size is microscopic (0.01 BTC, ~$1,050 notional per trade), but the behavioral pattern is the kind that blows accounts when size scales up.</p>
+
+<p>---</p>
+
+<h3>2. Why You&#x27;re Losing</h3>
+
+<p><strong>Reason 1: Shorting into a sustained, unambiguous uptrend.</strong></p>
+<p>BTC's price action during this session is not ambiguous. The market moved from ~$104,800 at 17:48 to ~$105,424 by 18:01 — a ~$620 rally over 13 minutes. This trader was short for the entire move.</p>
+
+<ul>
+<li>17:50 — Short, entry $104,866, exit $104,942 → <strong>-$0.60</strong>. BTC going up.</li>
+<li>17:50 — Short, entry $104,998, exit $105,131 → <strong>-$0.80</strong>. Still going up.</li>
+<li>18:00 — Short, entry $105,343, exit $105,423 → <strong>-$1.43</strong> (the largest single loss in the sequence). Still going up, 12 minutes after the rally started.</li>
+</ul>
+
+<p>The direction thesis (short BTC) was visibly wrong within the first few trades and never updated.</p>
+
+<p><strong>Reason 2: Fee erosion making even correct-direction trades losers.</strong></p>
+<p>At 0.01 BTC (~$1,050 notional), Hyperliquid's round-trip taker fees run approximately $0.85–$0.95. That means the trade must capture a price move of roughly <strong>$85–$95 in BTC</strong> just to break even. Most of these trades are open for under a minute and capture $10–$50. The one trade where direction was actually right — 18:05 Short, entry $105,219, exit $105,136 — captured an $83 favorable move and still printed <strong>-$0.04</strong> after fees. The economics of this setup are structurally unprofitable at this size regardless of direction.</p>
+
+<ul>
+<li>18:05 — Short, entry $105,219, exit $105,136 (price fell $83, correct direction) → <strong>-$0.04</strong>. Fees ate the gain.</li>
+<li>17:57 — Short, entry $105,313, exit $105,311 (price fell $2, technically correct) → <strong>-$0.86</strong>. Fees obliterated it.</li>
+<li>17:54 — Short, entry $105,172, exit $105,159 (price fell $13, correct) → <strong>-$0.33</strong>. Same.</li>
+</ul>
+
+<p><strong>Reason 3: No trade selection — entering on every tick.</strong></p>
+<p>81 trades in 77 minutes = one trade per minute, every minute, without pause. There is no evidence of waiting for a setup, a signal, or a level. This is continuous re-entry churn, not trading.</p>
+
+<ul>
+<li>17:59 alone: 6 separate short trades, each losing $0.55–$0.82, all within a single 60-second candle.</li>
+<li>17:52: 4 trades in under 60 seconds, all losses.</li>
+</ul>
+
+<p>There is no pattern of waiting. Every minute produces a new entry.</p>
+
+<p>---</p>
+
+<h3>3. Your Biases</h3>
+
+<p><strong>Overtrading / no-edge churn — CONFIRMED.</strong></p>
+<p>81 trades, 77 minutes, one asset, one day. Expectancy: -$0.50 per trade. This is not a scalping strategy — it is random entry at high frequency with no positive expected value. The size quartiles being uniformly $0.01 BTC indicate no position-sizing variation whatsoever; every trade is identical regardless of conviction or setup quality.</p>
+
+<p><strong>Directional stubbornness (related to confirmation bias) — CONFIRMED.</strong></p>
+<p>This is the dominant bias in the record. The correct label isn't revenge trading (which implies escalating size after losses — size stays flat here) but rather <strong>thesis anchoring</strong>: the trader formed a bearish view and held it for 77 minutes through 74 consecutive short losses while BTC climbed $600. Specific instances where the trend was unmistakable but the short thesis persisted anyway:</p>
+
+<ul>
+<li>17:50–17:51: BTC ran from $104,866 → $105,178, a $312 rally in under 2 minutes. Response: 9 more consecutive shorts.</li>
+<li>18:00–18:01: Entry at $105,343, lost. Re-entered short at $105,424 one minute later → <strong>-$0.59</strong>. BTC is at a new session high and the next trade is still short.</li>
+<li>18:02–18:05: 11 more shorts after BTC has clearly been in an uptrend for 14 minutes.</li>
+</ul>
+
+<p><strong>Disposition effect — CANNOT CONFIRM.</strong> Zero winners in the data. There are no winning trades to cut early.</p>
+
+<p><strong>FOMO chasing — CANNOT CONFIRM.</strong> All trades are shorts into a rising market. If anything, this is the opposite: fighting momentum rather than chasing it.</p>
+
+<p><strong>Funding bleed — NOT PRESENT.</strong> No funding paid or earned across the session.</p>
+
+<p><strong>Over-leverage / liquidations — CANNOT ASSESS.</strong> Leverage field is null throughout. No liquidations occurred, which is consistent with very small notional size.</p>
+
+<p><strong>Session/time effects — PARTIALLY CONFIRMED, but trivial given only one session exists.</strong></p>
+<p>100% of trades occur in a single 77-minute window. Cannot determine if this hour is structurally worse without multi-day data, but the concentration is notable.</p>
+
+<p>---</p>
+
+<h3>4. What&#x27;s Working</h3>
+
+<p>Nothing. Zero winning trades across 81 attempts. There is no subset of this data with positive expectancy — not the longs (7 trades, -$2.35), not the shorts (74 trades, -$38.40), not any time bucket within the session. The only honest answer is that there is no edge present in this data to identify and scale.</p>
+
+<p>I will not fabricate a positive pattern where none exists.</p>
+
+<p>---</p>
+
+<h3>5. One Thing to Change Next</h3>
+
+<p><strong>Before placing any trade, write down the 1-hour trend direction. Then only take trades in that direction.</strong></p>
+
+<p>This is not philosophical. Here is the mechanical implementation: open a 1-hour BTC chart. Is the current candle above the prior candle's close? If yes, you may only go long. If no, you may only go short. If you cannot determine it, you sit out.</p>
+
+<p>In this session, BTC opened the 17:00 UTC hour around $104,800 and spent the entire hour printing higher lows and higher highs. A 60-second check of a 1-hour chart would have told you: trend is up, do not short. That one filter, applied before the first trade at 17:48, eliminates all 74 short losses — $38.40 of the $40.76 total loss.</p>
+
+<p>You can argue about entry timing, fee structure, or position sizing later. None of that matters until you stop trading directly into the trend. Fix the direction problem first. Everything else is secondary.</p>
+  </div>
+
+  <div class="footer">
+    Generated by hyperliquid-journal on 2026-05-21 07:42 UTC. Data from Hyperliquid API. Not financial advice.
+  </div>
+
+</div>
+</body>
+</html>

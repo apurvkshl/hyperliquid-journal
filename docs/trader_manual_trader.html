@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trading Report — Manual Trader</title>
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0f1117;
+  color: #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  padding: 2rem 1rem;
+}
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.6rem; color: #f8fafc; margin-bottom: 0.3rem; }
+h2 { font-size: 1.15rem; color: #94a3b8; font-weight: 500; margin-bottom: 1.5rem; }
+h3 { font-size: 1.05rem; color: #cbd5e1; margin: 2rem 0 0.7rem; border-bottom: 1px solid #1e293b; padding-bottom: 0.3rem; }
+p, li { margin-bottom: 0.5rem; }
+ul, ol { padding-left: 1.4rem; }
+code, .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 0.875em; }
+
+/* Header */
+.header { margin-bottom: 2.5rem; }
+.header .wallet { font-size: 1.3rem; color: #f1f5f9; font-family: monospace; letter-spacing: 0.03em; }
+.header .period  { color: #64748b; font-size: 0.9rem; margin-top: 0.2rem; }
+.header .pnl     { font-size: 2rem; font-weight: 700; margin-top: 0.5rem; font-family: monospace; }
+.pnl.pos  { color: #4ade80; }
+.pnl.neg  { color: #f87171; }
+.pnl.zero { color: #94a3b8; }
+
+/* Low-confidence banner */
+.banner {
+  background: #451a03;
+  border: 1px solid #92400e;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  color: #fbbf24;
+  font-size: 0.9rem;
+}
+
+/* Stats table */
+.stats-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; }
+.stats-table th {
+  background: #1e293b;
+  color: #94a3b8;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.stats-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #1e293b;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+.stats-table tr:hover td { background: #1a2234; }
+.num-pos { color: #4ade80; }
+.num-neg { color: #f87171; }
+.num-neutral { color: #93c5fd; }
+
+/* Markdown-rendered analysis */
+.analysis { margin-top: 1rem; }
+.analysis h3 { color: #e2e8f0; border-color: #334155; }
+.analysis p  { color: #cbd5e1; }
+.analysis li { color: #cbd5e1; }
+.analysis strong { color: #f1f5f9; }
+
+/* Asset chips */
+.chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.5rem 0 1.5rem; }
+.chip {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: #7dd3fc;
+}
+
+/* Equity curve */
+.equity-wrap { margin: 1.5rem 0; }
+.equity-wrap svg { display: block; width: 100%; border-radius: 6px; background: #0d1420; }
+
+/* Footer */
+.footer { margin-top: 3rem; font-size: 0.75rem; color: #334155; border-top: 1px solid #1e293b; padding-top: 1rem; }
+.no-data { color: #475569; font-style: italic; padding: 2rem 0; text-align: center; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="banner">⚠ LOW DATA — fewer than 20 round-trip trades. All patterns below are preliminary hypotheses, not conclusions.</div>
+
+  <div class="header">
+    <div class="wallet">Manual Trader</div>
+    <div class="period">2026-04-21 → 2026-05-13</div>
+    <div class="pnl num-neg">-$645.20</div>
+  </div>
+
+  <div class="chips"><span class="chip">BRENT</span><span class="chip">BTCUSD</span><span class="chip">ETHUSD</span><span class="chip">WTI</span><span class="chip">XAGUSD</span><span class="chip">XAUUSD</span></div>
+
+  <div class="equity-wrap"><h3>Equity Curve</h3><svg viewBox="0 0 860 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+      <linearGradient id="eqgrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#f87171" stop-opacity="0.35"/>
+        <stop offset="100%" stop-color="#f87171" stop-opacity="0.02"/>
+      </linearGradient>
+    </defs>
+  <line x1="30" y1="57.3" x2="830" y2="57.3" stroke="#334155" stroke-width="1" stroke-dasharray="4,4"/>
+  <polygon points="30.0,150.0 30.0,50.7 91.5,55.2 153.1,59.5 214.6,85.3 276.2,62.3 337.7,46.5 399.2,39.4 460.8,38.3 522.3,37.5 583.8,50.0 645.4,46.7 706.9,30.0 768.5,61.8 830.0,150.0 830.0,150.0" fill="url(#eqgrad)"/>
+  <polyline points="30.0,50.7 91.5,55.2 153.1,59.5 214.6,85.3 276.2,62.3 337.7,46.5 399.2,39.4 460.8,38.3 522.3,37.5 583.8,50.0 645.4,46.7 706.9,30.0 768.5,61.8 830.0,150.0" fill="none" stroke="#f87171" stroke-width="2" stroke-linejoin="round"/>
+  <text x="34" y="26.0" fill="#94a3b8" font-size="10" font-family="monospace">$+190</text>
+  <text x="34" y="162.0" fill="#94a3b8" font-size="10" font-family="monospace">$-645</text>
+</svg></div>
+
+  <h3>The Numbers</h3>
+  <table class="stats-table">
+    <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+    <tbody><tr><td>Total round-trip trades</td><td class="num-neutral mono">14</td></tr><tr><td>Win rate</td><td class="num-pos mono">57.1%</td></tr><tr><td>Avg win</td><td class="num-pos mono">+$64.76</td></tr><tr><td>Avg loss</td><td class="num-neg mono">-$193.88</td></tr><tr><td>Win/Loss ratio</td><td class="num-neutral mono">0.33</td></tr><tr><td>Expectancy</td><td class="num-neg mono">-$46.09</td></tr><tr><td>Profit factor</td><td class="num-neg mono">0.45</td></tr><tr><td>Net PnL (after fees &amp; funding)</td><td class="num-neg mono">-$645.20</td></tr><tr><td>Max drawdown</td><td class="num-neg mono">-$835.00</td></tr><tr><td>Avg leverage</td><td class="num-neutral mono">N/A</td></tr><tr><td>Peak leverage</td><td class="num-neutral mono">N/A</td></tr><tr><td>Long trades / PnL</td><td class="num-neg mono">8 / -$761.60</td></tr><tr><td>Short trades / PnL</td><td class="num-pos mono">6 / +$116.40</td></tr><tr><td>Avg hold time — winners</td><td class="num-neutral mono">1.0h</td></tr><tr><td>Avg hold time — losers</td><td class="num-neutral mono">1.0h</td></tr><tr><td>Funding earned</td><td class="num-pos mono">+$0.00</td></tr><tr><td>Funding paid</td><td class="num-neg mono">+$0.00</td></tr><tr><td>Liquidations</td><td class="num-neutral mono">0</td></tr></tbody>
+  </table>
+
+  <h3>Per-Asset Breakdown</h3>
+  <table class="stats-table">
+    <thead><tr><th>Asset</th><th>Trades</th><th>Win Rate</th><th>Net PnL</th><th>Profit Factor</th></tr></thead>
+    <tbody><tr><td class="mono">BRENT</td><td>1</td><td class="mono">0.0%</td><td class="mono num-neg">-$29.70</td><td class="mono">0.00</td></tr><tr><td class="mono">BTCUSD</td><td>2</td><td class="mono">50.0%</td><td class="mono num-neg">-$498.00</td><td class="mono">0.19</td></tr><tr><td class="mono">ETHUSD</td><td>2</td><td class="mono">50.0%</td><td class="mono num-neg">-$214.90</td><td class="mono">0.03</td></tr><tr><td class="mono">WTI</td><td>2</td><td class="mono">50.0%</td><td class="mono num-neg">-$64.00</td><td class="mono">0.26</td></tr><tr><td class="mono">XAGUSD</td><td>1</td><td class="mono">100.0%</td><td class="mono num-pos">+$7.00</td><td class="mono">∞</td></tr><tr><td class="mono">XAUUSD</td><td>6</td><td class="mono">66.7%</td><td class="mono num-pos">+$154.40</td><td class="mono">1.73</td></tr></tbody>
+  </table>
+
+  <div class="analysis">
+    <h3>Trading Coach Report — 14-Trade Sample (Apr 21 – May 13, 2026)</h3>
+
+<p>*Low-confidence sample. Every finding below is a hypothesis to test over the next 50+ trades, not a verdict.*</p>
+
+<p>---</p>
+
+<h3>1. The Verdict</h3>
+
+<p>You are a directionally-aware trader with a genuine feel for trend in one instrument — XAUUSD — who is systematically destroying that edge with asymmetric trade management. Your win rate is 57%, which means your reads are more right than wrong. But your average winner pays $64.76 while your average loser costs $193.88, a ratio of 0.33. That number alone guarantees you lose money at any win rate below ~75%. The single most expensive thing you are doing is letting every losing trade run to its full stop while manually exiting every winning trade at a fraction of its target. You are not making bad calls — you are executing good calls badly.</p>
+
+<p>---</p>
+
+<h3>2. Why You&#x27;re Losing</h3>
+
+<p><strong>The mechanism: winners close at ~0.4R, losers always close at -1R.</strong></p>
+
+<p>Every one of your six losses hit its full stop loss. Every one of your eight winners was cut short — usually well short. Compute the R-multiple on each winner using your own planned-risk figures:</p>
+
+<p>| Trade | Outcome | Planned Risk | Actual PnL | R Captured |</p>
+<p>|-------|---------|-------------|------------|------------|</p>
+<p>| #1 | manual_exit | $50 | +$46 | <strong>0.92R</strong> |</p>
+<p>| #5 | manual_exit | $470 | +$160 | <strong>0.34R</strong> |</p>
+<p>| #6 | HIT_TP | $910 | +$110 | <strong>0.12R</strong> |</p>
+<p>| #7 | manual_exit | $150 | +$50 | <strong>0.33R</strong> |</p>
+<p>| #9 | manual_exit | $16 | +$6.10 | <strong>0.38R</strong> |</p>
+<p>| #11 | manual_exit | $38 | +$23 | <strong>0.61R</strong> |</p>
+<p>| #12 | manual_exit | $365 | +$116 | <strong>0.32R</strong> |</p>
+
+<p>Average winner: <strong>0.43R</strong>. Average loser: <strong>-1.00R</strong> (Trades #2, #3, #4, #10, #13, #14 all stopped to the dollar).</p>
+
+<p>The result is structural. For break-even at 0.43R winners vs 1.00R losers, you'd need a win rate above <strong>70%</strong>. You're at 57%. This is not a streak of bad luck — it's arithmetic working against you on every trade.</p>
+
+<p><strong>Trade #6 is the starkest example of the structural problem:</strong> You were short XAUUSD from 4520, planned $910 of risk, and took profit at 4509 for $110. You accepted 11 points of gain while apparently comfortable with a stop implying ~90 points of room. That TP-to-SL ratio is roughly 1:8 in the wrong direction. Even though the trade "worked," the setup was broken before entry.</p>
+
+<p><strong>The May 13 cluster (-$696 in one day)</strong> illustrates the tail risk. Trades #13 (-$614) and #14 (-$221) hit full stops, wiping out everything from the prior two weeks and then some. One bad day cost more than your entire sample's previous losses combined.</p>
+
+<p>---</p>
+
+<h3>3. Your Biases</h3>
+
+<p><strong>Disposition Effect: CONFIRMED — strong.</strong></p>
+
+<p>The pattern is unambiguous across 14 trades. You exit manually when a trade is in profit (and leave most of the move on the table), and you hold to the stop when a trade is against you. This is the textbook disposition effect. Trade #12 captures $116 from BTC long and exits manually. Trade #13, the very next BTC long, holds to a -$614 stop. You are faster on the trigger when green than when red.</p>
+
+<p>---</p>
+
+<p><strong>Revenge trading / position-size escalation: CONFIRMED on Apr 28.</strong></p>
+
+<p>Trade #4: XAUUSD Short, planned risk <strong>$180</strong>, stopped out at 4597 for -$180.</p>
+
+<p>Trade #5, entered the same day: XAUUSD Short again, planned risk <strong>$470</strong> — 2.6x the previous trade's risk. It won $160, but only because you manually exited at 0.34R. If it had stopped out instead, you'd have lost $470 on top of $180 — a $650 single-session drawdown. The escalation here is visible and not explained by a structural reason (no new signal, same instrument, same direction, same session).</p>
+
+<p>---</p>
+
+<p><strong>Overtrading May 13: CONFIRMED — 4 trades, net -$696.</strong></p>
+
+<p>May 13 saw Trades #11 (WTI, +$23), #12 (BTC, +$116), #13 (BTC, -$614), #14 (ETH, -$221). The planned risk on trades #13 and #14 alone was <strong>$835</strong> — which equals your max drawdown for the entire sample. After two small wins on the same afternoon, the two follow-up trades had combined planned exposure nearly 10x larger than those wins. The wins appear to have created overconfidence rather than discipline.</p>
+
+<p>---</p>
+
+<p><strong>Poor R:R on individual trades: CONFIRMED — structural.</strong></p>
+
+<p>Trade #6 is the clearest case: $910 SL, $110 TP. That is a 0.12:1 reward-to-risk ratio by design. Even Trade #5 — a winner — had a prospective R:R under 1:1 if the manual exit point was the intended TP. Across all trades, only Trade #1 came close to a 1:1 ratio (0.92R captured). Six of eight winners were closed below 0.5R. This is not random — this is a systematic TP placement problem.</p>
+
+<p>---</p>
+
+<p><strong>FOMO entries after a move has run: CONFIRMED on Trade #13.</strong></p>
+
+<p>Trade #12: Long BTC at <strong>80,997</strong>, manually exited at 81,113 (+$116). Trade #13: Long BTC again at <strong>81,246</strong> — entered *above* your own exit price, chasing a move you just profited from. The result: -$614. This is the most expensive single trade in the sample, and it was an entry into momentum you had already captured and closed. Trade #14 (ETH Long at 2,318.10) shows similar logic — ETH was already elevated after your own Trade #9 shorted it at 2,291.70 two sessions earlier.</p>
+
+<p>---</p>
+
+<h3>4. What&#x27;s Working</h3>
+
+<p><strong>XAUUSD shorts are your only demonstrable edge.</strong></p>
+
+<p>| Metric | XAUUSD | Everything else |</p>
+<p>|--------|--------|-----------------|</p>
+<p>| Trades | 6 | 8 |</p>
+<p>| Total PnL | <strong>+$154.40</strong> | <strong>-$799.60</strong> |</p>
+<p>| Win Rate | 67% | 50% |</p>
+<p>| Profit Factor | <strong>1.73</strong> | < 0.30 on every asset |</p>
+
+<p>Trades #5, #6, and #7 are all XAUUSD Shorts executed while gold was in a defined downtrend (4785 → 4509 over three weeks). You caught that directional bias correctly. Within XAUUSD, your short side is genuinely profitable at a 1.73 profit factor — that is a real edge over 6 trades, not noise.</p>
+
+<p><strong>Short trades overall are working; long trades are not.</strong> Your 6 short trades generated +$116.40. Your 8 long trades generated -$761.60. This deserves investigation — it may reflect the market environment (gold declining, crypto choppy in late April/May), or it may reflect a tendency to enter longs at exhaustion points. Trade #3 (XAUUSD Long at 4755, stopped at 4752) and Trade #14 (ETH Long into a rally) both feel like counter-trend longs at extended levels.</p>
+
+<p>---</p>
+
+<h3>5. One Thing to Change Next</h3>
+
+<p><strong>Set your TP at a minimum of 1.5x your SL distance before entering the trade. Do not enter if you cannot identify a level that gives you 1.5R.</strong></p>
+
+<p>Here is what that looks like in practice with your own numbers:</p>
+
+<ul>
+<li>Trade #6: SL implied ~90 points. TP would need to be at least 4385 (135 points below 4520). You closed at 4509 — 11 points. Under this rule, that trade either has a tighter SL or a much lower TP target.</li>
+<li>Trade #5: $470 planned risk means your TP needed to be worth $705+. You took $160. Under this rule, you either size down or stay in.</li>
+<li>Trade #12: $365 risk on BTC, TP needed to pay $547+. You took $116 and exited. Under this rule, the trade doesn't close at $81,113.</li>
+</ul>
+
+<p>You do not need to change your entries. You do not need to change your stop placement. You need to set the TP before you enter, make it at least 1.5R away, and not touch it unless the market structure invalidates the trade. Your win rate of 57% is sufficient to be profitable at 1.5R:1R. The math works — you just have to stop overriding it.</p>
+  </div>
+
+  <div class="footer">
+    Generated by hyperliquid-journal on 2026-05-21 18:53 UTC. Data from Hyperliquid API. Not financial advice.
+  </div>
+
+</div>
+</body>
+</html>
