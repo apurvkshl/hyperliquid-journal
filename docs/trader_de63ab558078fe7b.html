@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trading Report — 0xde63...268a</title>
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0f1117;
+  color: #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  padding: 2rem 1rem;
+}
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.6rem; color: #f8fafc; margin-bottom: 0.3rem; }
+h2 { font-size: 1.15rem; color: #94a3b8; font-weight: 500; margin-bottom: 1.5rem; }
+h3 { font-size: 1.05rem; color: #cbd5e1; margin: 2rem 0 0.7rem; border-bottom: 1px solid #1e293b; padding-bottom: 0.3rem; }
+p, li { margin-bottom: 0.5rem; }
+ul, ol { padding-left: 1.4rem; }
+code, .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 0.875em; }
+
+/* Header */
+.header { margin-bottom: 2.5rem; }
+.header .wallet { font-size: 1.3rem; color: #f1f5f9; font-family: monospace; letter-spacing: 0.03em; }
+.header .period  { color: #64748b; font-size: 0.9rem; margin-top: 0.2rem; }
+.header .pnl     { font-size: 2rem; font-weight: 700; margin-top: 0.5rem; font-family: monospace; }
+.pnl.pos  { color: #4ade80; }
+.pnl.neg  { color: #f87171; }
+.pnl.zero { color: #94a3b8; }
+
+/* Low-confidence banner */
+.banner {
+  background: #451a03;
+  border: 1px solid #92400e;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  color: #fbbf24;
+  font-size: 0.9rem;
+}
+
+/* Stats table */
+.stats-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; }
+.stats-table th {
+  background: #1e293b;
+  color: #94a3b8;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.stats-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #1e293b;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+.stats-table tr:hover td { background: #1a2234; }
+.num-pos { color: #4ade80; }
+.num-neg { color: #f87171; }
+.num-neutral { color: #93c5fd; }
+
+/* Markdown-rendered analysis */
+.analysis { margin-top: 1rem; }
+.analysis h3 { color: #e2e8f0; border-color: #334155; }
+.analysis p  { color: #cbd5e1; }
+.analysis li { color: #cbd5e1; }
+.analysis strong { color: #f1f5f9; }
+
+/* Asset chips */
+.chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.5rem 0 1.5rem; }
+.chip {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: #7dd3fc;
+}
+
+/* Equity curve */
+.equity-wrap { margin: 1.5rem 0; }
+.equity-wrap svg { display: block; width: 100%; border-radius: 6px; background: #0d1420; }
+
+/* Footer */
+.footer { margin-top: 3rem; font-size: 0.75rem; color: #334155; border-top: 1px solid #1e293b; padding-top: 1rem; }
+.no-data { color: #475569; font-style: italic; padding: 2rem 0; text-align: center; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  
+
+  <div class="header">
+    <div class="wallet">0xde63...268a</div>
+    <div class="period">2026-05-06 → 2026-05-31</div>
+    <div class="pnl num-neg">-$41.10</div>
+  </div>
+
+  <div class="chips"><span class="chip">xyz:CL</span><span class="chip">xyz:GOLD</span><span class="chip">xyz:SILVER</span><span class="chip">xyz:SP500</span></div>
+
+  <div class="equity-wrap"><h3>Equity Curve</h3><svg viewBox="0 0 860 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+      <linearGradient id="eqgrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#f87171" stop-opacity="0.35"/>
+        <stop offset="100%" stop-color="#f87171" stop-opacity="0.02"/>
+      </linearGradient>
+    </defs>
+  <line x1="30" y1="30.1" x2="830" y2="30.1" stroke="#334155" stroke-width="1" stroke-dasharray="4,4"/>
+  <polygon points="30.0,150.0 30.0,30.0 34.9,30.0 39.8,30.0 44.7,30.1 49.6,30.1 54.5,30.1 59.4,30.1 64.4,30.1 69.3,30.1 74.2,30.1 79.1,30.1 84.0,30.1 88.9,30.1 93.8,30.1 98.7,30.1 103.6,30.1 108.5,30.0 113.4,30.0 118.3,30.0 123.3,30.0 128.2,30.0 133.1,30.0 138.0,30.1 142.9,30.0 147.8,30.1 152.7,30.1 157.6,30.0 162.5,30.1 167.4,30.1 172.3,30.4 177.2,30.5 182.1,30.5 187.1,30.5 192.0,30.5 196.9,30.4 201.8,30.5 206.7,30.5 211.6,30.5 216.5,30.5 221.4,30.5 226.3,30.6 231.2,30.6 236.1,30.6 241.0,30.6 246.0,30.6 250.9,30.6 255.8,30.6 260.7,30.6 265.6,30.6 270.5,30.6 275.4,30.7 280.3,30.7 285.2,30.6 290.1,30.6 295.0,30.7 299.9,30.7 304.8,30.7 309.8,30.9 314.7,31.1 319.6,31.1 324.5,31.1 329.4,31.1 334.3,31.1 339.2,31.1 344.1,31.2 349.0,31.1 353.9,31.1 358.8,31.1 363.7,31.2 368.7,31.2 373.6,31.2 378.5,31.2 383.4,31.2 388.3,31.2 393.2,31.3 398.1,31.3 403.0,31.3 407.9,31.4 412.8,31.4 417.7,31.3 422.6,31.4 427.5,31.4 432.5,31.4 437.4,31.3 442.3,31.3 447.2,31.3 452.1,31.4 457.0,31.4 461.9,31.4 466.8,31.5 471.7,31.5 476.6,31.6 481.5,31.6 486.4,31.6 491.3,31.5 496.3,31.4 501.2,31.4 506.1,31.4 511.0,31.4 515.9,31.4 520.8,31.4 525.7,31.5 530.6,31.6 535.5,31.6 540.4,31.6 545.3,31.7 550.2,31.7 555.2,31.8 560.1,31.8 565.0,31.8 569.9,31.8 574.8,31.8 579.7,31.8 584.6,31.8 589.5,31.9 594.4,31.9 599.3,32.1 604.2,32.1 609.1,32.3 614.0,32.3 619.0,32.3 623.9,32.2 628.8,32.3 633.7,32.4 638.6,32.5 643.5,32.6 648.4,32.6 653.3,32.7 658.2,32.8 663.1,32.8 668.0,32.8 672.9,32.5 677.9,32.5 682.8,32.6 687.7,32.6 692.6,32.6 697.5,32.5 702.4,32.4 707.3,32.5 712.2,149.7 717.1,149.8 722.0,149.9 726.9,149.8 731.8,149.9 736.7,150.0 741.7,150.0 746.6,150.0 751.5,149.8 756.4,149.7 761.3,149.5 766.2,149.5 771.1,149.5 776.0,149.5 780.9,149.7 785.8,149.7 790.7,149.7 795.6,149.7 800.6,149.7 805.5,149.6 810.4,149.8 815.3,149.8 820.2,149.8 825.1,149.8 830.0,149.8 830.0,150.0" fill="url(#eqgrad)"/>
+  <polyline points="30.0,30.0 34.9,30.0 39.8,30.0 44.7,30.1 49.6,30.1 54.5,30.1 59.4,30.1 64.4,30.1 69.3,30.1 74.2,30.1 79.1,30.1 84.0,30.1 88.9,30.1 93.8,30.1 98.7,30.1 103.6,30.1 108.5,30.0 113.4,30.0 118.3,30.0 123.3,30.0 128.2,30.0 133.1,30.0 138.0,30.1 142.9,30.0 147.8,30.1 152.7,30.1 157.6,30.0 162.5,30.1 167.4,30.1 172.3,30.4 177.2,30.5 182.1,30.5 187.1,30.5 192.0,30.5 196.9,30.4 201.8,30.5 206.7,30.5 211.6,30.5 216.5,30.5 221.4,30.5 226.3,30.6 231.2,30.6 236.1,30.6 241.0,30.6 246.0,30.6 250.9,30.6 255.8,30.6 260.7,30.6 265.6,30.6 270.5,30.6 275.4,30.7 280.3,30.7 285.2,30.6 290.1,30.6 295.0,30.7 299.9,30.7 304.8,30.7 309.8,30.9 314.7,31.1 319.6,31.1 324.5,31.1 329.4,31.1 334.3,31.1 339.2,31.1 344.1,31.2 349.0,31.1 353.9,31.1 358.8,31.1 363.7,31.2 368.7,31.2 373.6,31.2 378.5,31.2 383.4,31.2 388.3,31.2 393.2,31.3 398.1,31.3 403.0,31.3 407.9,31.4 412.8,31.4 417.7,31.3 422.6,31.4 427.5,31.4 432.5,31.4 437.4,31.3 442.3,31.3 447.2,31.3 452.1,31.4 457.0,31.4 461.9,31.4 466.8,31.5 471.7,31.5 476.6,31.6 481.5,31.6 486.4,31.6 491.3,31.5 496.3,31.4 501.2,31.4 506.1,31.4 511.0,31.4 515.9,31.4 520.8,31.4 525.7,31.5 530.6,31.6 535.5,31.6 540.4,31.6 545.3,31.7 550.2,31.7 555.2,31.8 560.1,31.8 565.0,31.8 569.9,31.8 574.8,31.8 579.7,31.8 584.6,31.8 589.5,31.9 594.4,31.9 599.3,32.1 604.2,32.1 609.1,32.3 614.0,32.3 619.0,32.3 623.9,32.2 628.8,32.3 633.7,32.4 638.6,32.5 643.5,32.6 648.4,32.6 653.3,32.7 658.2,32.8 663.1,32.8 668.0,32.8 672.9,32.5 677.9,32.5 682.8,32.6 687.7,32.6 692.6,32.6 697.5,32.5 702.4,32.4 707.3,32.5 712.2,149.7 717.1,149.8 722.0,149.9 726.9,149.8 731.8,149.9 736.7,150.0 741.7,150.0 746.6,150.0 751.5,149.8 756.4,149.7 761.3,149.5 766.2,149.5 771.1,149.5 776.0,149.5 780.9,149.7 785.8,149.7 790.7,149.7 795.6,149.7 800.6,149.7 805.5,149.6 810.4,149.8 815.3,149.8 820.2,149.8 825.1,149.8 830.0,149.8" fill="none" stroke="#f87171" stroke-width="2" stroke-linejoin="round"/>
+  <text x="34" y="26.0" fill="#94a3b8" font-size="10" font-family="monospace">$+0</text>
+  <text x="34" y="162.0" fill="#94a3b8" font-size="10" font-family="monospace">$-41</text>
+</svg></div>
+
+  <h3>The Numbers</h3>
+  <table class="stats-table">
+    <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+    <tbody><tr><td>Total round-trip trades</td><td class="num-neutral mono">164</td></tr><tr><td>Win rate</td><td class="num-neg mono">35.4%</td></tr><tr><td>Avg win</td><td class="num-pos mono">+$0.01</td></tr><tr><td>Avg loss</td><td class="num-neg mono">-$0.39</td></tr><tr><td>Win/Loss ratio</td><td class="num-neutral mono">0.03</td></tr><tr><td>Expectancy</td><td class="num-neg mono">-$0.25</td></tr><tr><td>Profit factor</td><td class="num-neg mono">0.02</td></tr><tr><td>Net PnL (after fees &amp; funding)</td><td class="num-neg mono">-$41.10</td></tr><tr><td>Max drawdown</td><td class="num-neg mono">-$41.12</td></tr><tr><td>Avg leverage</td><td class="num-neutral mono">1.5x</td></tr><tr><td>Peak leverage</td><td class="num-neutral mono">57.9x</td></tr><tr><td>Long trades / PnL</td><td class="num-neg mono">75 / -$40.76</td></tr><tr><td>Short trades / PnL</td><td class="num-neg mono">89 / -$0.34</td></tr><tr><td>Avg hold time — winners</td><td class="num-neutral mono">0.8h</td></tr><tr><td>Avg hold time — losers</td><td class="num-neutral mono">0.2h</td></tr><tr><td>Funding earned</td><td class="num-pos mono">+$0.06</td></tr><tr><td>Funding paid</td><td class="num-neg mono">+$0.00</td></tr><tr><td>Liquidations</td><td class="num-neutral mono">0</td></tr></tbody>
+  </table>
+
+  <h3>Per-Asset Breakdown</h3>
+  <table class="stats-table">
+    <thead><tr><th>Asset</th><th>Trades</th><th>Win Rate</th><th>Net PnL</th><th>Profit Factor</th></tr></thead>
+    <tbody><tr><td class="mono">xyz:CL</td><td>1</td><td class="mono">0.0%</td><td class="mono num-neg">-$40.24</td><td class="mono">0.00</td></tr><tr><td class="mono">xyz:GOLD</td><td>27</td><td class="mono">11.1%</td><td class="mono num-neg">-$0.59</td><td class="mono">0.13</td></tr><tr><td class="mono">xyz:SILVER</td><td>115</td><td class="mono">36.5%</td><td class="mono num-neg">-$0.45</td><td class="mono">0.43</td></tr><tr><td class="mono">xyz:SP500</td><td>21</td><td class="mono">61.9%</td><td class="mono num-pos">+$0.17</td><td class="mono">2.02</td></tr></tbody>
+  </table>
+
+  <div class="analysis">
+    <h3>Trading Coach Report — 0xde63...268a | Hyperliquid Perps | 164 Trades</h3>
+
+<p>---</p>
+
+<h3>1. The Verdict</h3>
+
+<p>This is a micro-position scalper with genuine directional instincts on SP500, who is running an uncontrolled side experiment in commodities with no edge and periodically detonating their account with reckless leverage. The trading break down as follows: strip out a single crude oil long on 2026-05-08 at 58x leverage and this account is -$0.86 across 163 trades — essentially breakeven noise. That one CL trade, held 9.2 hours into a $1.90 adverse move, accounts for <strong>98% of the $41.10 total loss</strong>. Everything else — the 115 SILVER churns, the 27 GOLD losses, the 21 SP500 trades that actually work — is rounding error. The single most expensive thing this trader is doing is picking up $0.01 winners all week and then randomly strapping on 58x on an asset they demonstrably have no edge in.</p>
+
+<p>---</p>
+
+<h3>2. Why You&#x27;re Losing</h3>
+
+<p><strong>Reason 1: One catastrophic leverage spike on a non-edge asset erased the account.</strong></p>
+
+<p>The CL trade on 2026-05-08 14:52 is the only trade that matters financially. Long crude at $93.99, exit $92.09, held 9.2 hours at <strong>58x leverage</strong>, loss: <strong>-$40.24</strong>. For context, the next largest single losing trade in the sequence is -$0.06. There is no scenario where 58x on oil is appropriate risk management. A 2% adverse move at that leverage is existential. This was not a bad trade — it was a size felony.</p>
+
+<p><strong>Reason 2: GOLD has an 11% win rate and they keep trading it.</strong></p>
+
+<p>27 GOLD trades, win rate 11%, profit factor 0.13, total PnL -$0.59. Look at May 6 from 11:06–13:20: they fired 13 GOLD trades in roughly 2 hours — Long -$0.05 (11:56), Short -$0.02 (11:33), Long -$0.03 (11:12), Long -$0.02 (11:43), Short -$0.03 (13:01), Long -$0.05 (13:04) — almost every single one a loser. There is no evidence of a repeatable edge in GOLD. The 11% win rate is below random.</p>
+
+<p><strong>Reason 3: SILVER generates 70% of all trade activity but near-zero dollar contribution.</strong></p>
+
+<p>115 trades, 37% win rate, profit factor 0.43, total PnL -$0.45. Avg win $0.01, avg loss -$0.01. This is pure churn. On May 6, SILVER trades like: Long -$0.05 (11:41), Short -$0.01 (11:25), Long -$0.01 (11:26), Long -$0.01 (11:29) — flipping direction every few minutes with no apparent signal, collecting small losses. The SILVER book is not losing big, but it is consuming the majority of this trader's cognitive bandwidth and producing nothing.</p>
+
+<p>---</p>
+
+<h3>3. Your Biases</h3>
+
+<p><strong>Confirmed: Over-leverage / asset-specific leverage recklessness</strong></p>
+
+<p>The overall avg leverage is 1.49x, which is fine. Peak leverage is 57.9x, which is the CL trade. This is not a trader who "runs high leverage" — it is a trader who occasionally and catastrophically abandons all sizing discipline on a new asset. SP500 trades run 2x–4x. GOLD/SILVER run 0x–1x. CL got 58x. The pattern suggests that when they move to an unfamiliar asset or feel conviction, the leverage guardrail disappears entirely. One data point, but the financial impact is definitive.</p>
+
+<p><strong>Confirmed: Overtrading / no-edge churn</strong></p>
+
+<p>SILVER: 115 trades, profit factor 0.43. GOLD: 27 trades, profit factor 0.13. Together, 142 trades (87% of total volume) on two assets with no demonstrated edge, generating -$1.04 in PnL. On May 6 between 11:06 and 13:08, there are 20+ alternating Long/Short SILVER and GOLD trades, many lasting under 5 minutes, nearly all small losers. This is not a trading strategy — it is restless activity mistaken for trading.</p>
+
+<p><strong>Confirmed: Over-concentration / ignoring their actual edge asset</strong></p>
+
+<p>SP500 is the only asset with a positive profit factor (2.02), a win rate above 50% (62%), and positive total PnL (+$0.17). They have 21 SP500 trades versus 115 SILVER trades. They are spending 5.5x more time on their worst asset than on their best one. The two longest-held SP500 winners — the May 29 short (+$0.05, 20.2h) and the May 30 short (+$0.03, 14.8h) — suggest they can identify and hold directional moves on this asset. They are not replicating this behavior on SP500 frequently enough.</p>
+
+<p><strong>Refuted: Disposition effect (cutting winners early, holding losers)</strong></p>
+
+<p>The data says the opposite: avg hold time on winners is 0.84 hours vs. 0.17 hours on losers. They exit losing trades faster than winning ones. This is the correct behavior. Cannot confirm this bias.</p>
+
+<p><strong>Refuted: Revenge trading after losses</strong></p>
+
+<p>After the CL blowup on May 8, the next trade is May 14 — a 6-day gap. No evidence of immediate re-entry at inflated size following losses. Cannot confirm this bias.</p>
+
+<p><strong>Refuted: Funding bleed</strong></p>
+
+<p>Total funding paid: $0. Total funding earned: $0.06. No funding impact. Cannot confirm.</p>
+
+<p><strong>Cannot confirm: FOMO chasing, session/time effects</strong></p>
+
+<p>The hour bucket data shows clustering in 6–12 UTC (London/EU morning), but the trade sequence doesn't provide per-hour PnL breakdowns that would let me isolate materially worse performance at specific hours. Day-of-week data shows 135/164 trades on Tuesday (day index 2), but this likely reflects a short observation window anchored to one active session, not a behavioral bias. Cannot confirm either.</p>
+
+<p>---</p>
+
+<h3>4. What&#x27;s Working</h3>
+
+<p><strong>SP500 is the only edge in this book. The numbers are unambiguous.</strong></p>
+
+<ul>
+<li>Win rate: 62% (vs. 35% overall)</li>
+<li>Profit factor: 2.02 (everything else is below 1)</li>
+<li>Total PnL: +$0.17 on 21 trades</li>
+</ul>
+
+<p>The best trades in the entire sequence are SP500 shorts held for hours:</p>
+<ul>
+<li>2026-05-29 18:00 — Short, +$0.05, held <strong>20.2 hours</strong>, 2x leverage</li>
+<li>2026-05-30 14:12 — Short, +$0.03, held <strong>14.8 hours</strong>, 10x leverage</li>
+<li>2026-05-29 15:11 — Short, +$0.05, held <strong>2.8 hours</strong>, 4x leverage</li>
+<li>2026-05-29 11:00 — Short, +$0.06, held <strong>0.5 hours</strong>, 4x leverage</li>
+</ul>
+
+<p>The pattern: SP500 shorts during the 2026-05-29 to 2026-05-30 window were consistently profitable, and when this trader held them — even across hours — they captured real moves. This is the behavior to replicate. The intraday SP500 scalps (May 31, sub-1 minute holds, +$0.01 and -$0.01) are much lower signal.</p>
+
+<p>---</p>
+
+<h3>5. One Thing to Change Next</h3>
+
+<p><strong>Impose a hard per-trade leverage cap of 5x. No exceptions, no overrides, no &quot;this one is different.&quot;</strong></p>
+
+<p>You lost $40.24 — 98% of your entire drawdown — on a single trade at 58x. You did not lose it because your directional call was wrong. You lost it because 58x on crude oil means a 1.7% adverse move wipes $40. At 5x, that same move costs $3.46. You survive, you learn, you adjust.</p>
+
+<p>This is not philosophical. Write "MAX 5x" on a sticky note and put it on your monitor. Before any trade entry, check your leverage. If it reads above 5x, reduce size until it doesn't. Do this for the next 30 trading days before changing anything else. Your SP500 edge is real — a 62% win rate with a 2.02 profit factor is worth building on — but you will never get to build on it if one rogue CL trade resets your account every few weeks.</p>
+  </div>
+
+  <div class="footer">
+    Generated by hyperliquid-journal on 2026-05-31 11:41 UTC. Data from Hyperliquid API. Not financial advice.
+  </div>
+
+</div>
+</body>
+</html>

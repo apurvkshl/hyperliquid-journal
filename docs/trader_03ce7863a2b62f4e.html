@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trading Report — 0x03ce...8c76</title>
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0f1117;
+  color: #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  padding: 2rem 1rem;
+}
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.6rem; color: #f8fafc; margin-bottom: 0.3rem; }
+h2 { font-size: 1.15rem; color: #94a3b8; font-weight: 500; margin-bottom: 1.5rem; }
+h3 { font-size: 1.05rem; color: #cbd5e1; margin: 2rem 0 0.7rem; border-bottom: 1px solid #1e293b; padding-bottom: 0.3rem; }
+p, li { margin-bottom: 0.5rem; }
+ul, ol { padding-left: 1.4rem; }
+code, .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 0.875em; }
+
+/* Header */
+.header { margin-bottom: 2.5rem; }
+.header .wallet { font-size: 1.3rem; color: #f1f5f9; font-family: monospace; letter-spacing: 0.03em; }
+.header .period  { color: #64748b; font-size: 0.9rem; margin-top: 0.2rem; }
+.header .pnl     { font-size: 2rem; font-weight: 700; margin-top: 0.5rem; font-family: monospace; }
+.pnl.pos  { color: #4ade80; }
+.pnl.neg  { color: #f87171; }
+.pnl.zero { color: #94a3b8; }
+
+/* Low-confidence banner */
+.banner {
+  background: #451a03;
+  border: 1px solid #92400e;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  color: #fbbf24;
+  font-size: 0.9rem;
+}
+
+/* Stats table */
+.stats-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; }
+.stats-table th {
+  background: #1e293b;
+  color: #94a3b8;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.stats-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #1e293b;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+.stats-table tr:hover td { background: #1a2234; }
+.num-pos { color: #4ade80; }
+.num-neg { color: #f87171; }
+.num-neutral { color: #93c5fd; }
+
+/* Markdown-rendered analysis */
+.analysis { margin-top: 1rem; }
+.analysis h3 { color: #e2e8f0; border-color: #334155; }
+.analysis p  { color: #cbd5e1; }
+.analysis li { color: #cbd5e1; }
+.analysis strong { color: #f1f5f9; }
+
+/* Asset chips */
+.chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.5rem 0 1.5rem; }
+.chip {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: #7dd3fc;
+}
+
+/* Equity curve */
+.equity-wrap { margin: 1.5rem 0; }
+.equity-wrap svg { display: block; width: 100%; border-radius: 6px; background: #0d1420; }
+
+/* Footer */
+.footer { margin-top: 3rem; font-size: 0.75rem; color: #334155; border-top: 1px solid #1e293b; padding-top: 1rem; }
+.no-data { color: #475569; font-style: italic; padding: 2rem 0; text-align: center; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="banner">⚠ LOW DATA — fewer than 20 round-trip trades. All patterns below are preliminary hypotheses, not conclusions.</div>
+
+  <div class="header">
+    <div class="wallet">0x03ce...8c76</div>
+    <div class="period">2026-05-17 → 2026-05-31</div>
+    <div class="pnl num-neg">-$2,565.26</div>
+  </div>
+
+  <div class="chips"><span class="chip">BTC</span><span class="chip">ETH</span><span class="chip">xyz:CL</span><span class="chip">xyz:GOLD</span><span class="chip">xyz:SILVER</span><span class="chip">xyz:SP500</span></div>
+
+  <div class="equity-wrap"><h3>Equity Curve</h3><svg viewBox="0 0 860 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+      <linearGradient id="eqgrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#f87171" stop-opacity="0.35"/>
+        <stop offset="100%" stop-color="#f87171" stop-opacity="0.02"/>
+      </linearGradient>
+    </defs>
+  
+  <polygon points="30.0,150.0 30.0,45.7 91.5,49.3 153.1,73.5 214.6,68.2 276.2,30.0 337.7,54.7 399.2,61.8 460.8,129.3 522.3,135.8 583.8,150.0 645.4,138.6 706.9,124.5 768.5,117.2 830.0,117.3 830.0,150.0" fill="url(#eqgrad)"/>
+  <polyline points="30.0,45.7 91.5,49.3 153.1,73.5 214.6,68.2 276.2,30.0 337.7,54.7 399.2,61.8 460.8,129.3 522.3,135.8 583.8,150.0 645.4,138.6 706.9,124.5 768.5,117.2 830.0,117.3" fill="none" stroke="#f87171" stroke-width="2" stroke-linejoin="round"/>
+  <text x="34" y="26.0" fill="#94a3b8" font-size="10" font-family="monospace">$-699</text>
+  <text x="34" y="162.0" fill="#94a3b8" font-size="10" font-family="monospace">$-3,265</text>
+</svg></div>
+
+  <h3>The Numbers</h3>
+  <table class="stats-table">
+    <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+    <tbody><tr><td>Total round-trip trades</td><td class="num-neutral mono">14</td></tr><tr><td>Win rate</td><td class="num-neg mono">35.7%</td></tr><tr><td>Avg win</td><td class="num-pos mono">+$326.22</td></tr><tr><td>Avg loss</td><td class="num-neg mono">-$466.26</td></tr><tr><td>Win/Loss ratio</td><td class="num-neutral mono">0.70</td></tr><tr><td>Expectancy</td><td class="num-neg mono">-$183.23</td></tr><tr><td>Profit factor</td><td class="num-neg mono">0.39</td></tr><tr><td>Net PnL (after fees &amp; funding)</td><td class="num-neg mono">-$2,565.26</td></tr><tr><td>Max drawdown</td><td class="num-neg mono">-$3,107.43</td></tr><tr><td>Avg leverage</td><td class="num-neutral mono">2.7x</td></tr><tr><td>Peak leverage</td><td class="num-neutral mono">7.1x</td></tr><tr><td>Long trades / PnL</td><td class="num-neg mono">10 / -$1,063.84</td></tr><tr><td>Short trades / PnL</td><td class="num-neg mono">4 / -$1,501.43</td></tr><tr><td>Avg hold time — winners</td><td class="num-neutral mono">68.2h</td></tr><tr><td>Avg hold time — losers</td><td class="num-neutral mono">35.0h</td></tr><tr><td>Funding earned</td><td class="num-pos mono">+$0.00</td></tr><tr><td>Funding paid</td><td class="num-neg mono">+$0.00</td></tr><tr><td>Liquidations</td><td class="num-neutral mono">0</td></tr></tbody>
+  </table>
+
+  <h3>Per-Asset Breakdown</h3>
+  <table class="stats-table">
+    <thead><tr><th>Asset</th><th>Trades</th><th>Win Rate</th><th>Net PnL</th><th>Profit Factor</th></tr></thead>
+    <tbody><tr><td class="mono">BTC</td><td>5</td><td class="mono">60.0%</td><td class="mono num-neg">-$24.16</td><td class="mono">0.98</td></tr><tr><td class="mono">ETH</td><td>1</td><td class="mono">0.0%</td><td class="mono num-neg">-$151.63</td><td class="mono">0.00</td></tr><tr><td class="mono">xyz:CL</td><td>4</td><td class="mono">50.0%</td><td class="mono num-pos">+$101.30</td><td class="mono">1.23</td></tr><tr><td class="mono">xyz:GOLD</td><td>1</td><td class="mono">0.0%</td><td class="mono num-neg">-$2.29</td><td class="mono">0.00</td></tr><tr><td class="mono">xyz:SILVER</td><td>2</td><td class="mono">0.0%</td><td class="mono num-neg">-$1,970.97</td><td class="mono">0.00</td></tr><tr><td class="mono">xyz:SP500</td><td>1</td><td class="mono">0.0%</td><td class="mono num-neg">-$517.50</td><td class="mono">0.00</td></tr></tbody>
+  </table>
+
+  <div class="analysis">
+    <h3>Trading Review: 0x03ce...8c76 — Hyperliquid Perpetuals</h3>
+
+<p><strong>LOW DATA — 14 round-trip trades. Every pattern below is a preliminary hypothesis, not a conclusion. You need at minimum 20–30 more trades before any of this is statistically confirmed.</strong></p>
+
+<p>---</p>
+
+<h3>1. The Verdict</h3>
+
+<p>This is a macro-instrument speculator — BTC, crude oil, silver, S&P 500, gold — who has a plausible, nearly-breakeven edge in two assets (CL and BTC) and is systematically destroying that edge by venturing into instruments where their win rate is zero. The single most expensive thing they are doing is trading SILVER: two trades, zero wins, <strong>-$1,970.97</strong>, representing <strong>77% of total losses</strong> on this account. The second SILVER trade was a same-price directional flip entered the day after the first SILVER loss — a revenge trade that cost 2.7x more than the loss that triggered it. Fix that one behavior and this account looks almost entirely different.</p>
+
+<p>---</p>
+
+<h3>2. Why You&#x27;re Losing</h3>
+
+<p><strong>Reason 1: You are concentrating losses in assets where you have zero demonstrated edge.</strong></p>
+
+<p>The three "xyz:" assets outside of crude oil have a combined record of 0 wins from 4 trades, -$2,490.76 in losses. That is 97% of total account losses. By contrast, BTC and CL together show -$24.16 and +$101.30 respectively.</p>
+
+<ul>
+<li><strong>xyz:SILVER, 2026-05-21:</strong> Long, -$528.24, 22.9h hold</li>
+<li><strong>xyz:SILVER, 2026-05-22:</strong> Short, -$1,442.73, 0.0h hold</li>
+<li><strong>xyz:SP500, 2026-05-20:</strong> Short, -$517.50, 226.4h hold</li>
+</ul>
+
+<p>These three trades are the account. Everything else is nearly a wash.</p>
+
+<p><strong>Reason 2: Flipping direction on the same asset immediately after a loss.</strong></p>
+
+<p>On 2026-05-21, you went long SILVER and lost $528. The very next day (2026-05-22), you shorted SILVER at the same price (75.75) and lost $1,442. You doubled down on a thesis, flipped the direction, and lost 2.7x more. Neither trade had a winner. Total damage from this two-trade sequence: <strong>-$1,970.97</strong>.</p>
+
+<p><strong>Reason 3: Same-session re-entry on a losing direction.</strong></p>
+
+<p>On 2026-05-23, you entered CL long at 14:11 and lost -$139.33 in 4.2h. You re-entered CL long the same day at 18:22 and lost another -$303.84 over 54.7h. Two entries, same direction, same session, both losses. The second position was held 13x longer and lost 2.2x more. There is no evidence in this data that the second entry had a different thesis — it looks like averaging into a losing direction.</p>
+
+<p>---</p>
+
+<h3>3. Your Biases</h3>
+
+<p><strong>Confirmed (with evidence):</strong></p>
+
+<p><strong>Revenge / flip trading</strong></p>
+<p>After losing $528 long SILVER on 2026-05-21, you entered short SILVER on 2026-05-22 at the exact same price (75.75 → 75.75) with 0.0h hold time on the resulting exit. This is the textbook pattern: loss → immediate re-entry on the opposite side → bigger loss. The short lost $1,442, nearly triple the original long loss. This single flip trade is the largest single loss in the dataset.</p>
+
+<p><strong>Over-concentration in non-edge assets</strong></p>
+<p>You have positive or near-neutral results in CL (+$101, PF 1.23) and BTC (-$24, PF 0.98, 60% win rate). Yet 3 of 14 trades went to SILVER, SP500, and GOLD — assets with a combined 0% win rate. The data cannot tell you *why* you entered these, but it is clear you are allocating capital to instruments where you have not demonstrated any edge. SP500 short entered 2026-05-20 at 7346 was held for 226.4 hours while the market moved 240 points against you. That is not a thesis playing out slowly — that is a wrong trade being held.</p>
+
+<p><strong>Refuted or insufficient evidence:</strong></p>
+
+<ul>
+<li><strong>Disposition effect (cutting winners early):</strong> Not confirmed. The aggregate data shows you hold winners an average of 68.2h vs. 34.95h for losers — the *opposite* of classic disposition effect. Your biggest winner (BTC Long 2026-05-20, +$816) was held 158h. You are not cutting winners short.</li>
+<li><strong>Over-leverage / liquidations:</strong> No liquidations. Average leverage 2.74x. The 7x CL trade on 2026-05-26 was a winner (+$243). Leverage is elevated on isolated trades but is not the primary driver of losses here.</li>
+<li><strong>Funding bleed:</strong> $0 funding paid or earned across all trades. Not applicable.</li>
+<li><strong>Session/time effects:</strong> 14 trades is too few to draw conclusions from the hour and day-of-week buckets.</li>
+</ul>
+
+<p>---</p>
+
+<h3>4. What&#x27;s Working</h3>
+
+<p><strong>Crude Oil (CL): Your best asset.</strong></p>
+<p>4 trades, 50% win rate, <strong>+$101.30</strong>, profit factor <strong>1.23</strong>. The two winners:</p>
+<ul>
+<li>Short 2026-05-27: +$301.38, held 101.3h at 4x leverage</li>
+<li>Long 2026-05-26: +$243.08, held 23.1h at 7x leverage (your peak leverage trade, and it won)</li>
+</ul>
+
+<p>The pattern on the winning CL trades is holding time — both winners were held for meaningful duration and captured real directional moves. Your losing CL trades were the same-session double-dip on 2026-05-23 described above.</p>
+
+<p><strong>BTC with patience and low leverage: Nearly breakeven and trending positive.</strong></p>
+<p>5 trades, 60% win rate, <strong>-$24.16</strong> (essentially flat). Your biggest single winner in the entire dataset is BTC Long 2026-05-20 at 1x leverage, held 158 hours for <strong>+$816.67</strong>. The trade before it that same day (2026-05-20 14:15, 2x lev) also won +$112.52. Your BTC losses came from higher leverage or shorter hold times: BTC 2026-05-17 at 2x held 4.7h, -$1,033.77.</p>
+
+<p><strong>The pattern:</strong> In CL and BTC, when you hold your conviction and size sensibly, the trades work. The PF on BTC (0.98) would be clearly positive if the -$1,033 BTC loss on 2026-05-17 were smaller — that single trade offset two winners.</p>
+
+<p>---</p>
+
+<h3>5. One Thing to Change Next</h3>
+
+<p><strong>Remove SILVER and SP500 from your order panel. Do not trade them again until you have a written pre-trade process and at least 20 historical instances of your thesis on those specific instruments.</strong></p>
+
+<p>This is not philosophical. The math is direct: SILVER and SP500 cost you $2,488.47 across 3 trades (0 wins). Your CL and BTC activity combined netted <strong>+$77.14</strong> over 9 trades. You are not a losing trader in your core instruments — you are a trader who took three positions in instruments with no demonstrated edge and handed back every dollar your better trades made, and then some.</p>
+
+<p>Tomorrow: close the SILVER and SP500 tabs. Trade only CL and BTC until you have 20+ trades in each showing consistent process. That is the entire adjustment.</p>
+  </div>
+
+  <div class="footer">
+    Generated by hyperliquid-journal on 2026-05-31 11:43 UTC. Data from Hyperliquid API. Not financial advice.
+  </div>
+
+</div>
+</body>
+</html>
