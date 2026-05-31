@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trading Report — 0xf3f4...057c</title>
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0f1117;
+  color: #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  padding: 2rem 1rem;
+}
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.6rem; color: #f8fafc; margin-bottom: 0.3rem; }
+h2 { font-size: 1.15rem; color: #94a3b8; font-weight: 500; margin-bottom: 1.5rem; }
+h3 { font-size: 1.05rem; color: #cbd5e1; margin: 2rem 0 0.7rem; border-bottom: 1px solid #1e293b; padding-bottom: 0.3rem; }
+p, li { margin-bottom: 0.5rem; }
+ul, ol { padding-left: 1.4rem; }
+code, .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 0.875em; }
+
+/* Header */
+.header { margin-bottom: 2.5rem; }
+.header .wallet { font-size: 1.3rem; color: #f1f5f9; font-family: monospace; letter-spacing: 0.03em; }
+.header .period  { color: #64748b; font-size: 0.9rem; margin-top: 0.2rem; }
+.header .pnl     { font-size: 2rem; font-weight: 700; margin-top: 0.5rem; font-family: monospace; }
+.pnl.pos  { color: #4ade80; }
+.pnl.neg  { color: #f87171; }
+.pnl.zero { color: #94a3b8; }
+
+/* Low-confidence banner */
+.banner {
+  background: #451a03;
+  border: 1px solid #92400e;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  color: #fbbf24;
+  font-size: 0.9rem;
+}
+
+/* Stats table */
+.stats-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; }
+.stats-table th {
+  background: #1e293b;
+  color: #94a3b8;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.stats-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #1e293b;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+.stats-table tr:hover td { background: #1a2234; }
+.num-pos { color: #4ade80; }
+.num-neg { color: #f87171; }
+.num-neutral { color: #93c5fd; }
+
+/* Markdown-rendered analysis */
+.analysis { margin-top: 1rem; }
+.analysis h3 { color: #e2e8f0; border-color: #334155; }
+.analysis p  { color: #cbd5e1; }
+.analysis li { color: #cbd5e1; }
+.analysis strong { color: #f1f5f9; }
+
+/* Asset chips */
+.chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.5rem 0 1.5rem; }
+.chip {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: #7dd3fc;
+}
+
+/* Equity curve */
+.equity-wrap { margin: 1.5rem 0; }
+.equity-wrap svg { display: block; width: 100%; border-radius: 6px; background: #0d1420; }
+
+/* Footer */
+.footer { margin-top: 3rem; font-size: 0.75rem; color: #334155; border-top: 1px solid #1e293b; padding-top: 1rem; }
+.no-data { color: #475569; font-style: italic; padding: 2rem 0; text-align: center; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="banner">⚠ LOW DATA — fewer than 20 round-trip trades. All patterns below are preliminary hypotheses, not conclusions.</div>
+
+  <div class="header">
+    <div class="wallet">0xf3f4...057c</div>
+    <div class="period">2026-05-21 → 2026-05-21</div>
+    <div class="pnl num-pos">+$13.00</div>
+  </div>
+
+  <div class="chips"><span class="chip">BTC</span><span class="chip">ETH</span></div>
+
+  <div class="equity-wrap"><h3>Equity Curve</h3><svg viewBox="0 0 860 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+      <linearGradient id="eqgrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#4ade80" stop-opacity="0.35"/>
+        <stop offset="100%" stop-color="#4ade80" stop-opacity="0.02"/>
+      </linearGradient>
+    </defs>
+  
+  <polygon points="30.0,150.0 30.0,30.0 830.0,150.0 830.0,150.0" fill="url(#eqgrad)"/>
+  <polyline points="30.0,30.0 830.0,150.0" fill="none" stroke="#4ade80" stroke-width="2" stroke-linejoin="round"/>
+  <text x="34" y="26.0" fill="#94a3b8" font-size="10" font-family="monospace">$+114</text>
+  <text x="34" y="162.0" fill="#94a3b8" font-size="10" font-family="monospace">$+13</text>
+</svg></div>
+
+  <h3>The Numbers</h3>
+  <table class="stats-table">
+    <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+    <tbody><tr><td>Total round-trip trades</td><td class="num-neutral mono">2</td></tr><tr><td>Win rate</td><td class="num-pos mono">50.0%</td></tr><tr><td>Avg win</td><td class="num-pos mono">+$114.00</td></tr><tr><td>Avg loss</td><td class="num-neg mono">-$101.00</td></tr><tr><td>Win/Loss ratio</td><td class="num-neutral mono">1.13</td></tr><tr><td>Expectancy</td><td class="num-pos mono">+$6.50</td></tr><tr><td>Profit factor</td><td class="num-pos mono">1.13</td></tr><tr><td>Net PnL (after fees &amp; funding)</td><td class="num-pos mono">+$13.00</td></tr><tr><td>Max drawdown</td><td class="num-neg mono">-$101.00</td></tr><tr><td>Avg leverage</td><td class="num-neutral mono">4.0x</td></tr><tr><td>Peak leverage</td><td class="num-neutral mono">5.0x</td></tr><tr><td>Long trades / PnL</td><td class="num-pos mono">1 / +$114.00</td></tr><tr><td>Short trades / PnL</td><td class="num-neg mono">1 / -$101.00</td></tr><tr><td>Avg hold time — winners</td><td class="num-neutral mono">2.0h</td></tr><tr><td>Avg hold time — losers</td><td class="num-neutral mono">1.0h</td></tr><tr><td>Funding earned</td><td class="num-pos mono">+$2.00</td></tr><tr><td>Funding paid</td><td class="num-neg mono">+$1.00</td></tr><tr><td>Liquidations</td><td class="num-neutral mono">0</td></tr></tbody>
+  </table>
+
+  <h3>Per-Asset Breakdown</h3>
+  <table class="stats-table">
+    <thead><tr><th>Asset</th><th>Trades</th><th>Win Rate</th><th>Net PnL</th><th>Profit Factor</th></tr></thead>
+    <tbody><tr><td class="mono">BTC</td><td>1</td><td class="mono">100.0%</td><td class="mono num-pos">+$114.00</td><td class="mono">∞</td></tr><tr><td class="mono">ETH</td><td>1</td><td class="mono">0.0%</td><td class="mono num-neg">-$101.00</td><td class="mono">0.00</td></tr></tbody>
+  </table>
+
+  <div class="analysis">
+    <h3>1. The Verdict</h3>
+<p>LOW DATA — treat all patterns as preliminary hypotheses.</p>
+<p>This trader has 2 trades, so no conclusions can be drawn.</p>
+
+<h3>2. Why You&#x27;re Losing</h3>
+<p><strong>ETH Short</strong> on 2026-05-21: -$101. Entered short into a rising market.</p>
+
+<h3>3. Your Biases</h3>
+<p>No evidenced biases with only 2 trades.</p>
+
+<h3>4. What&#x27;s Working</h3>
+<p>BTC Long netted +$114 in 2h. This is the only positive trade.</p>
+
+<h3>5. One Thing to Change Next</h3>
+<p>Run more trades before drawing any conclusions.</p>
+  </div>
+
+  <div class="footer">
+    Generated by hyperliquid-journal on 2026-05-21 05:33 UTC. Data from Hyperliquid API. Not financial advice.
+  </div>
+
+</div>
+</body>
+</html>

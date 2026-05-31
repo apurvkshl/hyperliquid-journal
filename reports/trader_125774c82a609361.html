@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trading Report — 0x1257...1cbd</title>
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0f1117;
+  color: #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  padding: 2rem 1rem;
+}
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.6rem; color: #f8fafc; margin-bottom: 0.3rem; }
+h2 { font-size: 1.15rem; color: #94a3b8; font-weight: 500; margin-bottom: 1.5rem; }
+h3 { font-size: 1.05rem; color: #cbd5e1; margin: 2rem 0 0.7rem; border-bottom: 1px solid #1e293b; padding-bottom: 0.3rem; }
+p, li { margin-bottom: 0.5rem; }
+ul, ol { padding-left: 1.4rem; }
+code, .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 0.875em; }
+
+/* Header */
+.header { margin-bottom: 2.5rem; }
+.header .wallet { font-size: 1.3rem; color: #f1f5f9; font-family: monospace; letter-spacing: 0.03em; }
+.header .period  { color: #64748b; font-size: 0.9rem; margin-top: 0.2rem; }
+.header .pnl     { font-size: 2rem; font-weight: 700; margin-top: 0.5rem; font-family: monospace; }
+.pnl.pos  { color: #4ade80; }
+.pnl.neg  { color: #f87171; }
+.pnl.zero { color: #94a3b8; }
+
+/* Low-confidence banner */
+.banner {
+  background: #451a03;
+  border: 1px solid #92400e;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  color: #fbbf24;
+  font-size: 0.9rem;
+}
+
+/* Stats table */
+.stats-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; }
+.stats-table th {
+  background: #1e293b;
+  color: #94a3b8;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.stats-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #1e293b;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+.stats-table tr:hover td { background: #1a2234; }
+.num-pos { color: #4ade80; }
+.num-neg { color: #f87171; }
+.num-neutral { color: #93c5fd; }
+
+/* Markdown-rendered analysis */
+.analysis { margin-top: 1rem; }
+.analysis h3 { color: #e2e8f0; border-color: #334155; }
+.analysis p  { color: #cbd5e1; }
+.analysis li { color: #cbd5e1; }
+.analysis strong { color: #f1f5f9; }
+
+/* Asset chips */
+.chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.5rem 0 1.5rem; }
+.chip {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: #7dd3fc;
+}
+
+/* Equity curve */
+.equity-wrap { margin: 1.5rem 0; }
+.equity-wrap svg { display: block; width: 100%; border-radius: 6px; background: #0d1420; }
+
+/* Footer */
+.footer { margin-top: 3rem; font-size: 0.75rem; color: #334155; border-top: 1px solid #1e293b; padding-top: 1rem; }
+.no-data { color: #475569; font-style: italic; padding: 2rem 0; text-align: center; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  
+
+  <div class="header">
+    <div class="wallet">0x1257...1cbd</div>
+    <div class="period">2025-05-25 → 2026-05-21</div>
+    <div class="pnl num-neg">-$2,492.76</div>
+  </div>
+
+  <div class="chips"><span class="chip">BTC</span><span class="chip">ETH</span><span class="chip">xyz:CL</span><span class="chip">xyz:GOLD</span><span class="chip">xyz:SILVER</span></div>
+
+  <div class="equity-wrap"><h3>Equity Curve</h3><svg viewBox="0 0 860 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+      <linearGradient id="eqgrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#f87171" stop-opacity="0.35"/>
+        <stop offset="100%" stop-color="#f87171" stop-opacity="0.02"/>
+      </linearGradient>
+    </defs>
+  
+  <polygon points="30.0,150.0 30.0,30.0 38.1,30.4 46.2,34.9 54.2,32.8 62.3,30.5 70.4,32.2 78.5,35.1 86.6,34.7 94.6,34.7 102.7,36.4 110.8,39.8 118.9,39.5 127.0,47.2 135.1,48.0 143.1,51.8 151.2,59.1 159.3,60.1 167.4,67.1 175.5,63.6 183.5,62.2 191.6,61.9 199.7,57.9 207.8,58.1 215.9,64.3 223.9,60.5 232.0,58.3 240.1,63.4 248.2,54.0 256.3,94.0 264.3,92.5 272.4,92.8 280.5,84.5 288.6,87.4 296.7,81.6 304.7,86.4 312.8,87.7 320.9,84.2 329.0,84.5 337.1,83.0 345.2,89.6 353.2,87.5 361.3,86.8 369.4,84.8 377.5,85.8 385.6,86.9 393.6,89.8 401.7,93.2 409.8,93.7 417.9,86.9 426.0,90.9 434.0,92.5 442.1,94.0 450.2,88.5 458.3,103.7 466.4,100.7 474.4,99.0 482.5,99.4 490.6,92.9 498.7,104.8 506.8,103.3 514.8,91.5 522.9,82.3 531.0,98.3 539.1,92.3 547.2,89.4 555.3,85.7 563.3,100.0 571.4,97.6 579.5,97.4 587.6,91.1 595.7,82.5 603.7,85.5 611.8,86.0 619.9,87.7 628.0,85.4 636.1,80.6 644.1,73.2 652.2,72.5 660.3,73.7 668.4,84.7 676.5,87.1 684.5,88.4 692.6,84.1 700.7,84.6 708.8,101.2 716.9,97.8 724.9,111.8 733.0,113.1 741.1,122.3 749.2,119.1 757.3,125.3 765.4,125.1 773.4,128.4 781.5,146.3 789.6,148.9 797.7,150.0 805.8,146.4 813.8,149.0 821.9,141.9 830.0,141.9 830.0,150.0" fill="url(#eqgrad)"/>
+  <polyline points="30.0,30.0 38.1,30.4 46.2,34.9 54.2,32.8 62.3,30.5 70.4,32.2 78.5,35.1 86.6,34.7 94.6,34.7 102.7,36.4 110.8,39.8 118.9,39.5 127.0,47.2 135.1,48.0 143.1,51.8 151.2,59.1 159.3,60.1 167.4,67.1 175.5,63.6 183.5,62.2 191.6,61.9 199.7,57.9 207.8,58.1 215.9,64.3 223.9,60.5 232.0,58.3 240.1,63.4 248.2,54.0 256.3,94.0 264.3,92.5 272.4,92.8 280.5,84.5 288.6,87.4 296.7,81.6 304.7,86.4 312.8,87.7 320.9,84.2 329.0,84.5 337.1,83.0 345.2,89.6 353.2,87.5 361.3,86.8 369.4,84.8 377.5,85.8 385.6,86.9 393.6,89.8 401.7,93.2 409.8,93.7 417.9,86.9 426.0,90.9 434.0,92.5 442.1,94.0 450.2,88.5 458.3,103.7 466.4,100.7 474.4,99.0 482.5,99.4 490.6,92.9 498.7,104.8 506.8,103.3 514.8,91.5 522.9,82.3 531.0,98.3 539.1,92.3 547.2,89.4 555.3,85.7 563.3,100.0 571.4,97.6 579.5,97.4 587.6,91.1 595.7,82.5 603.7,85.5 611.8,86.0 619.9,87.7 628.0,85.4 636.1,80.6 644.1,73.2 652.2,72.5 660.3,73.7 668.4,84.7 676.5,87.1 684.5,88.4 692.6,84.1 700.7,84.6 708.8,101.2 716.9,97.8 724.9,111.8 733.0,113.1 741.1,122.3 749.2,119.1 757.3,125.3 765.4,125.1 773.4,128.4 781.5,146.3 789.6,148.9 797.7,150.0 805.8,146.4 813.8,149.0 821.9,141.9 830.0,141.9" fill="none" stroke="#f87171" stroke-width="2" stroke-linejoin="round"/>
+  <text x="34" y="26.0" fill="#94a3b8" font-size="10" font-family="monospace">$-4</text>
+  <text x="34" y="162.0" fill="#94a3b8" font-size="10" font-family="monospace">$-2,673</text>
+</svg></div>
+
+  <h3>The Numbers</h3>
+  <table class="stats-table">
+    <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+    <tbody><tr><td>Total round-trip trades</td><td class="num-neutral mono">100</td></tr><tr><td>Win rate</td><td class="num-neg mono">45.0%</td></tr><tr><td>Avg win</td><td class="num-pos mono">+$83.12</td></tr><tr><td>Avg loss</td><td class="num-neg mono">-$113.33</td></tr><tr><td>Win/Loss ratio</td><td class="num-neutral mono">0.73</td></tr><tr><td>Expectancy</td><td class="num-neg mono">-$24.93</td></tr><tr><td>Profit factor</td><td class="num-neg mono">0.60</td></tr><tr><td>Net PnL (after fees &amp; funding)</td><td class="num-neg mono">-$2,492.76</td></tr><tr><td>Max drawdown</td><td class="num-neg mono">-$2,661.16</td></tr><tr><td>Avg leverage</td><td class="num-neutral mono">59716.6x</td></tr><tr><td>Peak leverage</td><td class="num-neutral mono">2043099.5x</td></tr><tr><td>Long trades / PnL</td><td class="num-neg mono">66 / -$1,605.64</td></tr><tr><td>Short trades / PnL</td><td class="num-neg mono">34 / -$887.12</td></tr><tr><td>Avg hold time — winners</td><td class="num-neutral mono">14.3h</td></tr><tr><td>Avg hold time — losers</td><td class="num-neutral mono">17.4h</td></tr><tr><td>Funding earned</td><td class="num-pos mono">+$18.04</td></tr><tr><td>Funding paid</td><td class="num-neg mono">+$25.77</td></tr><tr><td>Liquidations</td><td class="num-neutral mono">0</td></tr></tbody>
+  </table>
+
+  <h3>Per-Asset Breakdown</h3>
+  <table class="stats-table">
+    <thead><tr><th>Asset</th><th>Trades</th><th>Win Rate</th><th>Net PnL</th><th>Profit Factor</th></tr></thead>
+    <tbody><tr><td class="mono">BTC</td><td>7</td><td class="mono">14.3%</td><td class="mono num-neg">-$242.30</td><td class="mono">0.03</td></tr><tr><td class="mono">ETH</td><td>5</td><td class="mono">60.0%</td><td class="mono num-neg">-$2.29</td><td class="mono">0.98</td></tr><tr><td class="mono">xyz:CL</td><td>1</td><td class="mono">100.0%</td><td class="mono num-pos">+$124.39</td><td class="mono">∞</td></tr><tr><td class="mono">xyz:GOLD</td><td>21</td><td class="mono">42.9%</td><td class="mono num-neg">-$135.80</td><td class="mono">0.83</td></tr><tr><td class="mono">xyz:SILVER</td><td>66</td><td class="mono">47.0%</td><td class="mono num-neg">-$2,236.76</td><td class="mono">0.56</td></tr></tbody>
+  </table>
+
+  <div class="analysis">
+    <p>[LLM analysis failed: Command '['claude', '-p', '--system-prompt', 'You are an experienced proprietary trader and trading coach. You have spent years reviewing trader blotters and you are direct, specific, and evidence-driven. You never give generic advice. Every observation you make is tied to specific trades or numbers from the data. You are honest about what you cannot conclude from limited data.', '--output-format', 'text', '--tools', '', '--model', 'sonnet']' timed out after 180 seconds]</p>
+  </div>
+
+  <div class="footer">
+    Generated by hyperliquid-journal on 2026-05-21 08:45 UTC. Data from Hyperliquid API. Not financial advice.
+  </div>
+
+</div>
+</body>
+</html>

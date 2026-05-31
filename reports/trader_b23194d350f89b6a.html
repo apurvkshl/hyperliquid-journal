@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trading Report — 0xb231...f0b0</title>
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0f1117;
+  color: #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  padding: 2rem 1rem;
+}
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.6rem; color: #f8fafc; margin-bottom: 0.3rem; }
+h2 { font-size: 1.15rem; color: #94a3b8; font-weight: 500; margin-bottom: 1.5rem; }
+h3 { font-size: 1.05rem; color: #cbd5e1; margin: 2rem 0 0.7rem; border-bottom: 1px solid #1e293b; padding-bottom: 0.3rem; }
+p, li { margin-bottom: 0.5rem; }
+ul, ol { padding-left: 1.4rem; }
+code, .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 0.875em; }
+
+/* Header */
+.header { margin-bottom: 2.5rem; }
+.header .wallet { font-size: 1.3rem; color: #f1f5f9; font-family: monospace; letter-spacing: 0.03em; }
+.header .period  { color: #64748b; font-size: 0.9rem; margin-top: 0.2rem; }
+.header .pnl     { font-size: 2rem; font-weight: 700; margin-top: 0.5rem; font-family: monospace; }
+.pnl.pos  { color: #4ade80; }
+.pnl.neg  { color: #f87171; }
+.pnl.zero { color: #94a3b8; }
+
+/* Low-confidence banner */
+.banner {
+  background: #451a03;
+  border: 1px solid #92400e;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  color: #fbbf24;
+  font-size: 0.9rem;
+}
+
+/* Stats table */
+.stats-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; }
+.stats-table th {
+  background: #1e293b;
+  color: #94a3b8;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.stats-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #1e293b;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+.stats-table tr:hover td { background: #1a2234; }
+.num-pos { color: #4ade80; }
+.num-neg { color: #f87171; }
+.num-neutral { color: #93c5fd; }
+
+/* Markdown-rendered analysis */
+.analysis { margin-top: 1rem; }
+.analysis h3 { color: #e2e8f0; border-color: #334155; }
+.analysis p  { color: #cbd5e1; }
+.analysis li { color: #cbd5e1; }
+.analysis strong { color: #f1f5f9; }
+
+/* Asset chips */
+.chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.5rem 0 1.5rem; }
+.chip {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: #7dd3fc;
+}
+
+/* Equity curve */
+.equity-wrap { margin: 1.5rem 0; }
+.equity-wrap svg { display: block; width: 100%; border-radius: 6px; background: #0d1420; }
+
+/* Footer */
+.footer { margin-top: 3rem; font-size: 0.75rem; color: #334155; border-top: 1px solid #1e293b; padding-top: 1rem; }
+.no-data { color: #475569; font-style: italic; padding: 2rem 0; text-align: center; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="banner">⚠ LOW DATA — fewer than 20 round-trip trades. All patterns below are preliminary hypotheses, not conclusions.</div>
+
+  <div class="header">
+    <div class="wallet">0xb231...f0b0</div>
+    <div class="period">2026-05-21 → 2026-05-21</div>
+    <div class="pnl num-neg">-$10.13</div>
+  </div>
+
+  <div class="chips"><span class="chip">xyz:CL</span><span class="chip">xyz:SILVER</span></div>
+
+  <div class="equity-wrap"><h3>Equity Curve</h3><svg viewBox="0 0 860 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+      <linearGradient id="eqgrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#f87171" stop-opacity="0.35"/>
+        <stop offset="100%" stop-color="#f87171" stop-opacity="0.02"/>
+      </linearGradient>
+    </defs>
+  <line x1="30" y1="38.7" x2="830" y2="38.7" stroke="#334155" stroke-width="1" stroke-dasharray="4,4"/>
+  <polygon points="30.0,150.0 30.0,30.0 230.0,77.8 430.0,150.0 630.0,132.6 830.0,134.5 830.0,150.0" fill="url(#eqgrad)"/>
+  <polyline points="30.0,30.0 230.0,77.8 430.0,150.0 630.0,132.6 830.0,134.5" fill="none" stroke="#f87171" stroke-width="2" stroke-linejoin="round"/>
+  <text x="34" y="26.0" fill="#94a3b8" font-size="10" font-family="monospace">$+1</text>
+  <text x="34" y="162.0" fill="#94a3b8" font-size="10" font-family="monospace">$-12</text>
+</svg></div>
+
+  <h3>The Numbers</h3>
+  <table class="stats-table">
+    <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+    <tbody><tr><td>Total round-trip trades</td><td class="num-neutral mono">5</td></tr><tr><td>Win rate</td><td class="num-neg mono">40.0%</td></tr><tr><td>Avg win</td><td class="num-pos mono">+$1.38</td></tr><tr><td>Avg loss</td><td class="num-neg mono">-$4.30</td></tr><tr><td>Win/Loss ratio</td><td class="num-neutral mono">0.32</td></tr><tr><td>Expectancy</td><td class="num-neg mono">-$2.03</td></tr><tr><td>Profit factor</td><td class="num-neg mono">0.21</td></tr><tr><td>Net PnL (after fees &amp; funding)</td><td class="num-neg mono">-$10.13</td></tr><tr><td>Max drawdown</td><td class="num-neg mono">-$12.68</td></tr><tr><td>Avg leverage</td><td class="num-neutral mono">3.7x</td></tr><tr><td>Peak leverage</td><td class="num-neutral mono">4.1x</td></tr><tr><td>Long trades / PnL</td><td class="num-neg mono">3 / -$11.76</td></tr><tr><td>Short trades / PnL</td><td class="num-pos mono">2 / +$1.63</td></tr><tr><td>Avg hold time — winners</td><td class="num-neutral mono">0.8h</td></tr><tr><td>Avg hold time — losers</td><td class="num-neutral mono">0.5h</td></tr><tr><td>Funding earned</td><td class="num-pos mono">+$0.00</td></tr><tr><td>Funding paid</td><td class="num-neg mono">+$0.00</td></tr><tr><td>Liquidations</td><td class="num-neutral mono">0</td></tr></tbody>
+  </table>
+
+  <h3>Per-Asset Breakdown</h3>
+  <table class="stats-table">
+    <thead><tr><th>Asset</th><th>Trades</th><th>Win Rate</th><th>Net PnL</th><th>Profit Factor</th></tr></thead>
+    <tbody><tr><td class="mono">xyz:CL</td><td>2</td><td class="mono">50.0%</td><td class="mono num-pos">+$1.63</td><td class="mono">8.76</td></tr><tr><td class="mono">xyz:SILVER</td><td>3</td><td class="mono">33.3%</td><td class="mono num-neg">-$11.76</td><td class="mono">0.07</td></tr></tbody>
+  </table>
+
+  <div class="analysis">
+    <h3>Coaching Report — 0xb231...f0b0</h3>
+<p><strong>LOW DATA — 5 trades, all on a single day. Every pattern below is a preliminary hypothesis. Do not treat any of this as proven.</strong></p>
+
+<p>---</p>
+
+<h3>1. The Verdict</h3>
+
+<p>This is a very early-stage trader with a single session of data, so I can only describe what happened on May 21st, not who this trader "is." What happened on that day is stark: they found a working setup (SILVER long, +$0.92 at 04:04), then re-entered the same direction on the same asset twice more while the market moved relentlessly against them, turning a modest start into a -$10.13 day. The single most expensive behavior visible in this data is <strong>directional stubbornness on SILVER</strong> — three long trades on an asset that dropped from 75.75 to 75.10 in a straight line, generating -$11.76 while their actually profitable asset (CL) sat largely untouched.</p>
+
+<p>---</p>
+
+<h3>2. Why You&#x27;re Losing</h3>
+
+<p><strong>Reason 1: Repeatedly buying a falling market without reassessing direction.</strong></p>
+<p>SILVER's price action on the day: 75.59 entry (04:04) → then price rallied to 75.75 where they entered again (05:03) → price fell to 75.50 (-$5.05) → they entered a third time at 75.54 (06:09) → price continued to 75.10 (-$7.63). The asset was telling them "this is not a long day" and they entered long three times. The second and third entries cost $12.68 combined.</p>
+
+<p><strong>Reason 2: Win/loss ratio is severely inverted.</strong></p>
+<p>Average win: $1.38. Average loss: $4.30. Ratio: 0.32. Even with a 40% win rate this math does not work — you need a win/loss ratio above ~1.5 to be profitable at 40% win rate. Concretely: the 04:04 SILVER win (+$0.92) and 06:54 CL win (+$1.84) total $2.76. The three losers total -$12.89. Wins need to be materially larger, or losses need to be cut harder.</p>
+
+<p><strong>Reason 3: Loss size grew with each SILVER re-entry, not shrank.</strong></p>
+<p>Trade 2 SILVER: -$5.05 (25-cent adverse move). Trade 3 SILVER: -$7.63 (44-cent adverse move). The third trade lost 51% more than the second. Either position size increased on re-entry, or stops were not tightened after the market confirmed the bearish direction. I cannot determine which from this data alone, but the result is the same: doubling down on a losing thesis.</p>
+
+<p>---</p>
+
+<h3>3. Your Biases</h3>
+
+<p><strong>CONFIRMED: Recovery/Re-entry After Loss (adjacent to revenge trading)</strong></p>
+<p>Classic revenge trading means larger size after a loss. I cannot verify size changed here, but the pattern of re-entering the same asset in the same direction within 60 minutes of a loss, twice, is present. Timeline: loss of -$5.05 at 05:03 → back in SILVER long at 06:09 (66 minutes later) → loss of -$7.63. The market gave no structural reason to re-enter long (price had just broken from 75.75 to 75.50). This is trading against the evidence because you want the trade to work, not because the setup is there.</p>
+
+<p><strong>CONFIRMED: Over-concentration in their losing asset vs. their actual edge asset</strong></p>
+<p>SILVER: 3 trades, profit factor <strong>0.07</strong>, -$11.76. CL: 2 trades, profit factor <strong>8.76</strong>, +$1.63. This trader spent 60% of their trades on the asset destroying them and 40% on the asset where they demonstrably have edge — or at minimum where market conditions were cooperative. On a day where CL was offering clean short setups (99.47 → 99.27, trend continuation), they kept going back to SILVER.</p>
+
+<p><strong>REFUTED: Disposition effect (cutting winners early, holding losers)</strong></p>
+<p>The data actually shows the opposite: avg hold on winners = 0.83h, avg hold on losers = 0.49h. They are exiting losers faster in time than winners. The problem is not time-of-hold — it's that the adverse price moves on losers are 3–6x larger than the favorable moves on winners. This is a sizing/stop issue, not a disposition bias.</p>
+
+<p><strong>REFUTED: Funding bleed</strong></p>
+<p>Total funding paid: $0.00. Not a factor here.</p>
+
+<p><strong>REFUTED: Over-leverage / liquidation risk</strong></p>
+<p>4x on SILVER and 3x on CL is moderate for Hyperliquid perpetuals. No liquidations. Leverage is not the primary problem — direction and re-entry discipline are.</p>
+
+<p><strong>CANNOT ASSESS: FOMO chasing, session/time effects, overtrading</strong></p>
+<p>All 5 trades are from a single 4.5-hour window on a single Wednesday. There is no baseline to compare session performance, and 5 trades is too few to distinguish overtrading from a normal session volume. Cannot confirm or refute these with one day of data.</p>
+
+<p>---</p>
+
+<h3>4. What&#x27;s Working</h3>
+
+<p><strong>CL shorts.</strong> Two trades, +$1.63 net, profit factor 8.76. Specifically: the 06:54 short from 99.47 to 99.27 (+$1.84 in 0.9 hours) is the cleanest trade in the blotter — entered with a real thesis (20-cent target achieved), held appropriately, exited. The follow-up CL short at 08:35 was a near-breakeven scratch (-$0.21, held 0 hours), which shows they recognized quickly it wasn't working and got out. That is correct behavior. More of this: CL shorts with defined targets, quick exit when the trade doesn't move immediately.</p>
+
+<p>---</p>
+
+<h3>5. One Thing to Change Next</h3>
+
+<p><strong>Implement a two-loss-same-asset rule: if you take two consecutive losses on the same asset in the same session, you are done with that asset for the day. No exceptions.</strong></p>
+
+<p>Here's what this would have done on May 21st: after the second SILVER long failed at 05:03 (-$5.05), you close the SILVER book. You do not trade SILVER again that day. Result: you avoid the -$7.63 at 06:09. Your day goes from -$10.13 to -$2.50. The rule costs nothing when you're right and stops the bleeding when you're wrong. Write it down, put it on your screen before the session opens, and enforce it mechanically — not based on whether you "feel like" the setup is different this time.</p>
+  </div>
+
+  <div class="footer">
+    Generated by hyperliquid-journal on 2026-05-21 08:49 UTC. Data from Hyperliquid API. Not financial advice.
+  </div>
+
+</div>
+</body>
+</html>
